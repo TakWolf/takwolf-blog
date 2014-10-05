@@ -4,7 +4,7 @@
   <subtitle><![CDATA[我叫幻影狼人，是一个苦逼但又快乐的程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.takwolf.com/"/>
-  <updated>2014-10-05T15:42:54.506Z</updated>
+  <updated>2014-10-05T18:05:49.569Z</updated>
   <id>http://blog.takwolf.com/</id>
   
   <author>
@@ -15,29 +15,19 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[begin]]></title>
-    <link href="http://blog.takwolf.com/2014/10/05/begin/"/>
-    <id>http://blog.takwolf.com/2014/10/05/begin/</id>
-    <published>2014-10-05T15:09:53.000Z</published>
-    <updated>2014-10-05T15:12:24.000Z</updated>
-    <content type="html"><![CDATA[<p>safsdafsadf</p>
-]]></content>
+    <title><![CDATA[博客迁移完毕]]></title>
+    <link href="http://blog.takwolf.com/2014/10/06/finish-blog-migration/"/>
+    <id>http://blog.takwolf.com/2014/10/06/finish-blog-migration/</id>
+    <published>2014-10-05T18:03:58.000Z</published>
+    <updated>2014-10-05T18:05:36.000Z</updated>
+    <content type="html"><![CDATA[]]></content>
     <summary type="html">
-    <![CDATA[<p>safsdafsadf</p>
-]]>
+    <![CDATA[]]>
     </summary>
     
-      <category term="tt" scheme="http://blog.takwolf.com/tags/tt/"/>
+      <category term="hexo" scheme="http://blog.takwolf.com/tags/hexo/"/>
     
-      <category term="aa" scheme="http://blog.takwolf.com/tags/aa/"/>
-    
-      <category term="dd" scheme="http://blog.takwolf.com/tags/dd/"/>
-    
-      <category term="aa" scheme="http://blog.takwolf.com/categories/aa/"/>
-    
-      <category term="dd" scheme="http://blog.takwolf.com/categories/aa/dd/"/>
-    
-      <category term="cc" scheme="http://blog.takwolf.com/categories/aa/dd/cc/"/>
+      <category term="吐槽" scheme="http://blog.takwolf.com/categories/%E5%90%90%E6%A7%BD/"/>
     
   </entry>
   
@@ -69,6 +59,65 @@
     <summary type="html">
     <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
     </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[辽工大教务在线Android客户端v1.2.6发布]]></title>
+    <link href="http://blog.takwolf.com/2014/09/23/lntuonline-build-30/"/>
+    <id>http://blog.takwolf.com/2014/09/23/lntuonline-build-30/</id>
+    <published>2014-09-22T17:31:21.000Z</published>
+    <updated>2014-10-05T17:56:41.000Z</updated>
+    <content type="html"><![CDATA[<p>辽工大教务在线Android客户端v1.2.6已更新。全新的界面设计，更简洁更扁平。课程表支持本地缓存。增加意见反馈功能，随时随地进行吐槽。低于1.2.0版本的应用安装会出现签名冲突错误，请先卸载旧版本再进行安装即可。</p>
+<p><img src="/img/t1.png" alt=""><br><img src="/img/t2.png" alt=""><br><img src="/img/t3.png" alt=""><br><img src="/img/t4.png" alt=""><br><img src="/img/t5.png" alt=""></p>
+<h3 id="下载地址：">下载地址：</h3>
+<ul>
+<li><p><a href="http://zhushou.360.cn/detail/index/soft_id/1964733?recrefer=SE_D_%E8%BE%BD%E5%B7%A5%E5%A4%A7%E6%95%99%E5%8A%A1%E5%9C%A8%E7%BA%BF" target="_blank" rel="external">360手机助手</a></p>
+</li>
+<li><p><a href="http://www.wandoujia.com/apps/com.lntu.online" target="_blank" rel="external">豌豆荚</a></p>
+</li>
+<li><p><a href="http://android.myapp.com/myapp/detail.htm?apkName=com.lntu.online" target="_blank" rel="external">应用宝</a></p>
+</li>
+<li><p><a href="http://apk.91.com/Soft/Android/com.lntu.online-30.html" target="_blank" rel="external">91手机助手</a></p>
+</li>
+<li><p><a href="http://static.sc.hiapk.com/appinfo/com.lntu.online" target="_blank" rel="external">安卓市场</a></p>
+</li>
+<li><p><a href="http://www.anzhi.com/soft_1863172.html" target="_blank" rel="external">安智市场</a></p>
+</li>
+<li><p><a href="http://shouji.baidu.com/software/item?docid=7033610" target="_blank" rel="external">百度手机助手</a></p>
+</li>
+<li><p><a href="http://www.pgyer.com/azjwzx" target="_blank" rel="external">蒲公英</a></p>
+</li>
+</ul>
+<p>在应用市场渠道下载的同学们，记得给好评哟~~O(∩_∩)O</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>辽工大教务在线Android客户端v1.2.6已更新。全新的界面设计，更简洁更扁平。课程表支持本地缓存。增加意见反馈功能，随时随地进行吐槽。低于1.2.0版本的应用安装会出现签名冲突错误，请先卸载旧版本再进行安装即可。</p>
+<p><img src="/img/t1.pn]]>
+    </summary>
+    
+      <category term="Android" scheme="http://blog.takwolf.com/tags/Android/"/>
+    
+      <category term="lntuonline" scheme="http://blog.takwolf.com/tags/lntuonline/"/>
+    
+      <category term="作品" scheme="http://blog.takwolf.com/categories/%E4%BD%9C%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android应用程序崩溃，捕获异常并显示错误信息]]></title>
+    <link href="http://blog.takwolf.com/2014/09/17/android-crash-show-activity/"/>
+    <id>http://blog.takwolf.com/2014/09/17/android-crash-show-activity/</id>
+    <published>2014-09-16T17:19:39.000Z</published>
+    <updated>2014-10-05T17:31:33.000Z</updated>
+    <content type="html"><![CDATA[]]></content>
+    <summary type="html">
+    <![CDATA[]]>
+    </summary>
+    
+      <category term="Android" scheme="http://blog.takwolf.com/tags/Android/"/>
+    
+      <category term="Android" scheme="http://blog.takwolf.com/categories/Android/"/>
     
   </entry>
   
