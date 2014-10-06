@@ -1,10 +1,10 @@
 title: 辽工大教务在线Android客户端v1.2.6发布
 date: 2014-09-23 01:31:21
-categories: [作品]
+categories: 作品
 tags: [Android,lntuonline]
 ---
 
-辽工大教务在线Android客户端v1.2.6已更新。全新的界面设计，更简洁更扁平。课程表支持本地缓存。增加意见反馈功能，随时随地进行吐槽。低于1.2.0版本的应用安装会出现签名冲突错误，请先卸载旧版本再进行安装即可。
+辽工大教务在线Android客户端，v1.2.6已更新。全新的界面设计，更简洁更扁平。课程表支持本地缓存。增加意见反馈功能，随时随地进行吐槽。<!-- more -->低于1.2.0版本的应用安装会出现签名冲突错误，请先卸载旧版本再进行安装即可。
 
 ![](/img/t1.png)
 ![](/img/t2.png)
@@ -18,6 +18,8 @@ tags: [Android,lntuonline]
 
 - [豌豆荚](http://www.wandoujia.com/apps/com.lntu.online)
 
+- [百度手机助手](http://shouji.baidu.com/software/item?docid=7033610)
+
 - [应用宝](http://android.myapp.com/myapp/detail.htm?apkName=com.lntu.online)
 
 - [91手机助手](http://apk.91.com/Soft/Android/com.lntu.online-30.html)
@@ -26,7 +28,7 @@ tags: [Android,lntuonline]
 
 - [安智市场](http://www.anzhi.com/soft_1863172.html)
 
-- [百度手机助手](http://shouji.baidu.com/software/item?docid=7033610)
+- [木蚂蚁应用市场](http://www.mumayi.com/android-851065.html?1412616355)
 
 - [蒲公英](http://www.pgyer.com/azjwzx)
 
