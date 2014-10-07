@@ -1,7 +1,7 @@
 title: About Me
 date: 2014-09-01 00:00:00
 ---
-本人性别男，爱好女。90后。双子座。强迫症患者。二次元人士。天生宅。8Bit收集狂。喵和Doge控。推理小说爱好者。打乒乓。喜欢探索和思考。
+本人性别男，爱好女。90后。双子座。强迫症患者。二次元人士。天生宅。8bit收集狂。喵和Doge控。推理小说爱好者。打乒乓。喜欢探索和思考。
 
 祖籍辽宁，现居住在北京，程序猿一枚。主修Android、Java和Web技术方向。对Ruby和nodeJs略有了解，痛恨Javascript。业余时间喜欢研究游戏开发技术，会些OpenGL，对C++和Lua比较熟悉。懂一点C#。
 
@@ -15,6 +15,8 @@ date: 2014-09-01 00:00:00
 
 - [新浪微博](http://weibo.com/takwolf)
 
+- [腾讯微博](http://t.qq.com/takwolf)
+
 - [百度空间](http://www.baidu.com/p/英雄E幻影狼人)
 
 - [哔哩哔哩](http://space.bilibili.com/445245) 
@@ -23,7 +25,7 @@ date: 2014-09-01 00:00:00
 
 - [Github](https://github.com/takwolf)
 
-- [GitOSC](http://git.oschina.net/takwolf)
+- [Git@OSC](http://git.oschina.net/takwolf)
 
 ### Contact ###
 

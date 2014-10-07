@@ -10,5 +10,4 @@ tags: [hexo,吐槽]
 
 现在逐渐的有时间了，博客会写的更多一些。之前写的一些也会整理一下慢慢迁移过来。Hexo的搭建，过段时间也会把方法和心得整理在博客上。总之从现在开始，重新开一个好头吧。
 
-Hexo的主页：
-[http://hexo.io](http://hexo.io/)
+Hexo的主页：[http://hexo.io](http://hexo.io/)
