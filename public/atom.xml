@@ -4,7 +4,7 @@
   <subtitle><![CDATA[我叫幻影狼人，是一个苦逼但又快乐的程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.takwolf.com/"/>
-  <updated>2014-10-09T02:41:55.717Z</updated>
+  <updated>2014-10-09T10:37:13.588Z</updated>
   <id>http://blog.takwolf.com/</id>
   
   <author>
@@ -49,9 +49,9 @@
     
     </summary>
     
-      <category term="吐槽" scheme="http://blog.takwolf.com/tags/%E5%90%90%E6%A7%BD/"/>
+      <category term="吐槽" scheme="http://blog.takwolf.com/tags/tucao/"/>
     
-      <category term="吐槽" scheme="http://blog.takwolf.com/categories/%E5%90%90%E6%A7%BD/"/>
+      <category term="吐槽" scheme="http://blog.takwolf.com/categories/tucao/"/>
     
   </entry>
   
@@ -76,9 +76,9 @@
     
       <category term="hexo" scheme="http://blog.takwolf.com/tags/hexo/"/>
     
-      <category term="吐槽" scheme="http://blog.takwolf.com/tags/%E5%90%90%E6%A7%BD/"/>
+      <category term="吐槽" scheme="http://blog.takwolf.com/tags/tucao/"/>
     
-      <category term="吐槽" scheme="http://blog.takwolf.com/categories/%E5%90%90%E6%A7%BD/"/>
+      <category term="吐槽" scheme="http://blog.takwolf.com/categories/tucao/"/>
     
   </entry>
   
@@ -158,7 +158,7 @@
     
       <category term="lntuonline" scheme="http://blog.takwolf.com/tags/lntuonline/"/>
     
-      <category term="作品" scheme="http://blog.takwolf.com/categories/%E4%BD%9C%E5%93%81/"/>
+      <category term="作品" scheme="http://blog.takwolf.com/categories/works/"/>
     
   </entry>
   

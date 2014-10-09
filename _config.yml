@@ -42,7 +42,10 @@ highlight:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  吐槽: tucao
+  作品: works
 tag_map:
+  吐槽: tucao
 
 # Archives
 ## 2: Enable pagination
