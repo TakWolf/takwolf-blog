@@ -67,9 +67,9 @@ author:
   intro_line1: "" ## eg: "Hello ,I'm Larry Page in Google."
   intro_line2: "" ## eg: "This is my blog,believe it or not."
   weibo:      takwolf ## http://weibo.com/takwolf
-  twitter:    ## e.g. yangjiansky for https://twitter.com/yangjiansky
+  twitter:    takwolf ## https://twitter.com/takwolf
   github:     takwolf ## https://github.com/takwolf
-  facebook:   ## e.g. yangjian for https://favebook.com/yangjian
+  facebook:   takwolf ## https://facebook.com/takwolf
   tsina:      2132513694 ## My weibo ID,It will be used in share button.
 
 #### Comment
