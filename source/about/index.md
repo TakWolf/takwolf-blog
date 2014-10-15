@@ -28,6 +28,14 @@ date: 2014-09-01 00:00:00
 
 - [Git@OSC](http://git.oschina.net/takwolf)
 
+### Community ###
+
+- [开源中国](http://my.oschina.net/takwolf)
+
+- [CNode](https://cnodejs.org/user/TakWolf)
+
+- [Ruby-China](https://ruby-china.org/takwolf)
+
 ### Contact ###
 
 - takwolf@foxmail.com

@@ -26,4 +26,10 @@ date: 2014-10-12 10:41:14
 
 我的学弟一枚，貌似在学Java。
 
-- [博客](http://mrwheat.gitcafe.com)
+- [博客](http://heymz.com)
+
+### Bugs ###
+
+我的学弟一枚，搞硬件的。跟楼上的是好基友。
+
+- [博客](http://isbugs.com)
