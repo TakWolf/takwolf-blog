@@ -4,7 +4,7 @@
   <subtitle><![CDATA[我叫幻影狼人，是一个苦逼但又快乐的程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.takwolf.com/"/>
-  <updated>2014-10-14T16:38:14.284Z</updated>
+  <updated>2014-10-16T03:53:01.658Z</updated>
   <id>http://blog.takwolf.com/</id>
   
   <author>
@@ -13,6 +13,136 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Android实现视频播放]]></title>
+    <link href="http://blog.takwolf.com/2014/10/16/android-video-view/"/>
+    <id>http://blog.takwolf.com/2014/10/16/android-video-view/</id>
+    <published>2014-10-16T02:48:42.000Z</published>
+    <updated>2014-10-16T03:52:41.000Z</updated>
+    <content type="html"><![CDATA[<p>提到视频播放，有这么几种方法。</p>
+<p>1.调用系统播放器</p>
+<pre><code><span class="constant">Uri uri</span> = Uri.parse(Environment.getExternalStorageDirectory().getPath()+<span class="string">"/video.mp4"</span>);  
+<span class="constant">Intent intent</span> = new Intent(Intent.ACTION_VIEW);
+intent.setDataAndType(uri, <span class="string">"video/mp4"</span>); <span class="comment">//这句不要忘记，表明资源是视频类型</span>
+startActivity(intent);
+</code></pre><p>2.使用MediaPlayer和SurfaceView</p>
+<p>说实话，这种方式太过麻烦，代码就不粘贴了。其实还有更简单的下面的第三种方法。</p>
+<p>3.使用VideoView</p>
+<p>这个本身就是为了播放视频而设计的控件。通过查看基础树我们发现，其实他就是继承了SurfaceView并且实现了MediaPlayerControl，实质是第二种方式的一个封装，而使用起来要方便很多，视频在 start 调用之后自动加载，你也不需要去手动释放资源，控件都帮你处理了。</p>
+<p>一个非常简单的例子：</p>
+<pre><code>videoView = (VideoView) findViewById(R.id.video_view);
+videoView.setMediaController(<span class="keyword">new</span> MediaController(<span class="keyword">this</span>));
+Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+<span class="string">"/video.mp4"</span>);
+videoView.setVideoURI(uri);
+videoView.start();
+</code></pre><p>上面代码中的 setMediaController 可以添加一个媒体控制器，这是一个默认实现的控件，包括进度，暂停神马的，如果没有特殊的要求，功能基本也就够用了。当然，你也可以自己来实现。VideoView本身也提供媒体控制接口和监听器。</p>
+<p>Android系统默认支持的视频格式如下：</p>
+<pre><code><span class="comment">//Video</span>
+addFileType(<span class="string">"MP4"</span>, FILE_TYPE_MP4, <span class="string">"video/mp4"</span>);
+addFileType(<span class="string">"M4V"</span>, FILE_TYPE_M4V, <span class="string">"video/mp4"</span>);
+addFileType(<span class="string">"3GP"</span>, FILE_TYPE_3GPP, <span class="string">"video/3gpp"</span>);
+addFileType(<span class="string">"3GPP"</span>, FILE_TYPE_3GPP, <span class="string">"video/3gpp"</span>);
+addFileType(<span class="string">"3G2"</span>, FILE_TYPE_3GPP2, <span class="string">"video/3gpp2"</span>);
+addFileType(<span class="string">"3GPP2"</span>, FILE_TYPE_3GPP2, <span class="string">"video/3gpp2"</span>);
+addFileType(<span class="string">"WMV"</span>, FILE_TYPE_WMV, <span class="string">"video/x-ms-wmv"</span>);
+</code></pre><p>这里还有一个问题要特殊说明一下，VideoView 加载视频需要通过 Uri 或者 Path。上面的代码是从 SDCard 中加载视频的,Uri的构筑方式是：</p>
+<pre><code><span class="constant">Uri uri</span> = Uri.parse(Environment.getExternalStorageDirectory().getPath()+<span class="string">"/video.mp4"</span>);
+</code></pre><p>当然，有的时候我们可能并不是要制作一个视频播放器，而是仅仅加载一些应用内置视频，做些产品或者功能演示神马的。我们的第一个思路是将视频文件放到assets资源目录下。实际编码中我们发现AssetManager竟然不能够直接获取Path，也无法直接构筑Uri。我们按照以往的经验:</p>
+<pre><code>WebView webView = <span class="keyword">new</span> WebView(<span class="keyword">this</span>);
+webView.loadUrl(<span class="keyword">file</span>:<span class="comment">///android_asset/index.html);</span>
+</code></pre><p>实测这种方式在VideoView中无效，控件会提示视频无法播放，从调试信息来看，应该是控件无法找到视频路径。</p>
+<p>百度和Google基本无方案，stackoverflow上有一个解答：<a href="http://stackoverflow.com/questions/3746361/i-want-to-play-a-video-from-my-assets-or-raw-folder" target="_blank" rel="external">链接</a></p>
+<p>最终的方案是这样的：将视频文件放到 res/raw 文件夹中（注意res资源的命名规则） ，然后通过包名和 R 中的资源编号构筑Uri</p>
+<pre><code><span class="constant">Uri uri</span> = Uri.parse(<span class="string">"android.resource://"</span> + getPackageName() + <span class="string">"/"</span> + R.raw.video);
+</code></pre><p>最终的代码：</p>
+<pre><code>videoView = (VideoView) findViewById(R.id.video_view);
+videoView.setMediaController(<span class="keyword">new</span> MediaController(<span class="keyword">this</span>));
+Uri uri = Uri.parse(<span class="string">"android.resource://"</span> + getPackageName() + <span class="string">"/"</span> + R.raw.video);
+videoView.setVideoURI(uri);
+videoView.start();
+</code></pre><p>问题解决。</p>
+<p>最后附上一个<a href="http://www.open-open.com/lib/view/open1341754267229.html" target="_blank" rel="external">链接</a>，这里有三种比较详细的视频播放例子，主要是有一个MediaPlay的例子，虽然没用，但留个备份。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>提到视频播放，有这么几种方法。</p>
+<p>1.调用系统播放器</p>
+<pre><code><span class="constant">Uri uri</span> = Uri.parse(Environment.getExternalStorageDirectory]]>
+    </summary>
+    
+      <category term="Android" scheme="http://blog.takwolf.com/tags/Android/"/>
+    
+      <category term="视频播放" scheme="http://blog.takwolf.com/tags/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE/"/>
+    
+      <category term="文件路径" scheme="http://blog.takwolf.com/tags/%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/"/>
+    
+      <category term="Android" scheme="http://blog.takwolf.com/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android应用通过新浪微博登陆]]></title>
+    <link href="http://blog.takwolf.com/2014/10/15/android-with-weibo-login/"/>
+    <id>http://blog.takwolf.com/2014/10/15/android-with-weibo-login/</id>
+    <published>2014-10-15T07:59:42.000Z</published>
+    <updated>2014-10-15T08:01:34.000Z</updated>
+    <content type="html"><![CDATA[<p>暂时记录，晚些时候整理</p>
+<p><a href="https://github.com/sinaweibosdk/weibo_android_sdk" target="_blank" rel="external">https://github.com/sinaweibosdk/weibo_android_sdk</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>暂时记录，晚些时候整理</p>
+<p><a href="https://github.com/sinaweibosdk/weibo_android_sdk" target="_blank" rel="external">https://github.com/sinaweib]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android应用通过QQ登陆]]></title>
+    <link href="http://blog.takwolf.com/2014/10/15/android-with-qq-login/"/>
+    <id>http://blog.takwolf.com/2014/10/15/android-with-qq-login/</id>
+    <published>2014-10-15T07:59:29.000Z</published>
+    <updated>2014-10-15T08:00:34.000Z</updated>
+    <content type="html"><![CDATA[<p>临时记录</p>
+<p><a href="http://wiki.open.qq.com/wiki/%E3%80%90QQ%E7%99%BB%E5%BD%95%E3%80%91Android_SDK%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="external">http://wiki.open.qq.com/wiki/%E3%80%90QQ%E7%99%BB%E5%BD%95%E3%80%91Android_SDK%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>临时记录</p>
+<p><a href="http://wiki.open.qq.com/wiki/%E3%80%90QQ%E7%99%BB%E5%BD%95%E3%80%91Android_SDK%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" ]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android通过MediaRecorder实现录音]]></title>
+    <link href="http://blog.takwolf.com/2014/10/15/android-media-recorder/"/>
+    <id>http://blog.takwolf.com/2014/10/15/android-media-recorder/</id>
+    <published>2014-10-15T06:49:23.000Z</published>
+    <updated>2014-10-15T06:53:31.000Z</updated>
+    <content type="html"><![CDATA[<p>暂时记录几篇文章，稍后做一个整理</p>
+<p>一个比较简单的录音实现</p>
+<p><a href="http://blog.csdn.net/cxf7394373/article/details/8313980" target="_blank" rel="external">http://blog.csdn.net/cxf7394373/article/details/8313980</a></p>
+<p>理论</p>
+<p><a href="http://blog.csdn.net/chindroid/article/details/7715638" target="_blank" rel="external">http://blog.csdn.net/chindroid/article/details/7715638</a></p>
+<p>暂停断点录音，手动合成每一个部分，该方法有待考究</p>
+<p><a href="http://blog.csdn.net/wanli_smile/article/details/7715030" target="_blank" rel="external">http://blog.csdn.net/wanli_smile/article/details/7715030</a></p>
+<p>检测路径是否存在，涉及子目录问题，咱记录</p>
+<p><a href="http://www.cnblogs.com/fly_binbin/archive/2010/12/15/1907292.html" target="_blank" rel="external">http://www.cnblogs.com/fly_binbin/archive/2010/12/15/1907292.html</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>暂时记录几篇文章，稍后做一个整理</p>
+<p>一个比较简单的录音实现</p>
+<p><a href="http://blog.csdn.net/cxf7394373/article/details/8313980" target="_blank" rel="externa]]>
+    </summary>
+    
+      <category term="Android" scheme="http://blog.takwolf.com/tags/Android/"/>
+    
+      <category term="录音" scheme="http://blog.takwolf.com/tags/%E5%BD%95%E9%9F%B3/"/>
+    
+      <category term="MediaRecorder" scheme="http://blog.takwolf.com/tags/MediaRecorder/"/>
+    
+      <category term="Android" scheme="http://blog.takwolf.com/categories/Android/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[对我大学参加过的计算机创业团队部分人的一些牢骚]]></title>
