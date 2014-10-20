@@ -6,6 +6,8 @@ date: 2014-09-01 00:00:00
 
 祖籍辽宁，现居住在北京，程序猿一枚。主修Android、Java和Web技术方向。对Ruby和nodeJs略有了解，痛恨Javascript。业余时间喜欢研究游戏开发技术，会些OpenGL，对C++和Lua比较熟悉。懂一点C#。
 
+我目前工作在[考拉成群的山上](http://coloshine.com)。
+
 ### TakWolf ###
 
 - [个人主页](http://takwolf.com)
@@ -21,6 +23,8 @@ date: 2014-09-01 00:00:00
 - [百度空间](http://www.baidu.com/p/英雄E幻影狼人)
 
 - [哔哩哔哩](http://space.bilibili.com/445245) 
+
+- [豆瓣小组](http://www.douban.com/people/takwolf)
 
 ### Project ###
 
