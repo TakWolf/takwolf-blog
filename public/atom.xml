@@ -4,7 +4,7 @@
   <subtitle><![CDATA[我叫幻影狼人，是一个苦逼但又快乐的程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.takwolf.com/"/>
-  <updated>2014-10-20T08:16:07.898Z</updated>
+  <updated>2014-10-30T05:39:50.147Z</updated>
   <id>http://blog.takwolf.com/</id>
   
   <author>
@@ -75,70 +75,6 @@ videoView.start();
       <category term="视频播放" scheme="http://blog.takwolf.com/tags/%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE/"/>
     
       <category term="文件路径" scheme="http://blog.takwolf.com/tags/%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84/"/>
-    
-      <category term="Android" scheme="http://blog.takwolf.com/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android应用通过新浪微博登陆]]></title>
-    <link href="http://blog.takwolf.com/2014/10/15/android-with-weibo-login/"/>
-    <id>http://blog.takwolf.com/2014/10/15/android-with-weibo-login/</id>
-    <published>2014-10-15T07:59:42.000Z</published>
-    <updated>2014-10-15T08:01:34.000Z</updated>
-    <content type="html"><![CDATA[<p>暂时记录，晚些时候整理</p>
-<p><a href="https://github.com/sinaweibosdk/weibo_android_sdk" target="_blank" rel="external">https://github.com/sinaweibosdk/weibo_android_sdk</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>暂时记录，晚些时候整理</p>
-<p><a href="https://github.com/sinaweibosdk/weibo_android_sdk" target="_blank" rel="external">https://github.com/sinaweib]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android应用通过QQ登陆]]></title>
-    <link href="http://blog.takwolf.com/2014/10/15/android-with-qq-login/"/>
-    <id>http://blog.takwolf.com/2014/10/15/android-with-qq-login/</id>
-    <published>2014-10-15T07:59:29.000Z</published>
-    <updated>2014-10-15T08:00:34.000Z</updated>
-    <content type="html"><![CDATA[<p>临时记录</p>
-<p><a href="http://wiki.open.qq.com/wiki/%E3%80%90QQ%E7%99%BB%E5%BD%95%E3%80%91Android_SDK%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="external">http://wiki.open.qq.com/wiki/%E3%80%90QQ%E7%99%BB%E5%BD%95%E3%80%91Android_SDK%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>临时记录</p>
-<p><a href="http://wiki.open.qq.com/wiki/%E3%80%90QQ%E7%99%BB%E5%BD%95%E3%80%91Android_SDK%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" ]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android通过MediaRecorder实现录音]]></title>
-    <link href="http://blog.takwolf.com/2014/10/15/android-media-recorder/"/>
-    <id>http://blog.takwolf.com/2014/10/15/android-media-recorder/</id>
-    <published>2014-10-15T06:49:23.000Z</published>
-    <updated>2014-10-15T06:53:31.000Z</updated>
-    <content type="html"><![CDATA[<p>暂时记录几篇文章，稍后做一个整理</p>
-<p>一个比较简单的录音实现</p>
-<p><a href="http://blog.csdn.net/cxf7394373/article/details/8313980" target="_blank" rel="external">http://blog.csdn.net/cxf7394373/article/details/8313980</a></p>
-<p>理论</p>
-<p><a href="http://blog.csdn.net/chindroid/article/details/7715638" target="_blank" rel="external">http://blog.csdn.net/chindroid/article/details/7715638</a></p>
-<p>暂停断点录音，手动合成每一个部分，该方法有待考究</p>
-<p><a href="http://blog.csdn.net/wanli_smile/article/details/7715030" target="_blank" rel="external">http://blog.csdn.net/wanli_smile/article/details/7715030</a></p>
-<p>检测路径是否存在，涉及子目录问题，咱记录</p>
-<p><a href="http://www.cnblogs.com/fly_binbin/archive/2010/12/15/1907292.html" target="_blank" rel="external">http://www.cnblogs.com/fly_binbin/archive/2010/12/15/1907292.html</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>暂时记录几篇文章，稍后做一个整理</p>
-<p>一个比较简单的录音实现</p>
-<p><a href="http://blog.csdn.net/cxf7394373/article/details/8313980" target="_blank" rel="externa]]>
-    </summary>
-    
-      <category term="Android" scheme="http://blog.takwolf.com/tags/Android/"/>
-    
-      <category term="录音" scheme="http://blog.takwolf.com/tags/%E5%BD%95%E9%9F%B3/"/>
-    
-      <category term="MediaRecorder" scheme="http://blog.takwolf.com/tags/MediaRecorder/"/>
     
       <category term="Android" scheme="http://blog.takwolf.com/categories/Android/"/>
     
