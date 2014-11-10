@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[TakWolf]]></title>
-  <subtitle><![CDATA[我叫幻影狼人，是一个苦逼但又快乐的程序猿]]></subtitle>
+  <subtitle><![CDATA[我叫幻影狼人，是一个精神病程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.takwolf.com/"/>
-  <updated>2014-10-30T05:39:50.147Z</updated>
+  <updated>2014-11-09T12:22:53.864Z</updated>
   <id>http://blog.takwolf.com/</id>
   
   <author>
@@ -13,6 +13,20 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[android-audio-record]]></title>
+    <link href="http://blog.takwolf.com/2014/10/31/android-audio-record/"/>
+    <id>http://blog.takwolf.com/2014/10/31/android-audio-record/</id>
+    <published>2014-10-31T07:12:49.000Z</published>
+    <updated>2014-10-31T07:13:07.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://blog.csdn.net/yegongheng/article/details/40624267" target="_blank" rel="external">http://blog.csdn.net/yegongheng/article/details/40624267</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://blog.csdn.net/yegongheng/article/details/40624267" target="_blank" rel="external">http://blog.csdn.net/yegongheng/article]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Android实现视频播放]]></title>
