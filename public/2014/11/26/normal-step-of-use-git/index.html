@@ -4,21 +4,18 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Android实现视频播放 | TakWolf</title>
+    <title>Git的一般化使用流程 | TakWolf</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="TakWolf">
     
-    <meta name="description" content="提到视频播放，有这么几种方法。
-1.调用系统播放器
-Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+&quot;/video.mp4&quot;);  
-Intent intent = new Intent(Intent.A">
+    <meta name="description" content="对于Git，平时我愿意使用SourceTree（本人是Windows环境），命令使用的比较少。这里对Git的一般化使用流程做一个总结，也作为一个快速查找手册。">
     
     
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="takgdx" />
-    <meta name="twitter:title" content="Android实现视频播放 | TakWolf" />
+    <meta name="twitter:title" content="Git的一般化使用流程 | TakWolf" />
       
     
     
@@ -85,15 +82,15 @@ Intent intent = new Intent(Intent.A">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/16/android-video-view/" title="Android实现视频播放" itemprop="url">Android实现视频播放</a>
+      <a href="/2014/11/26/normal-step-of-use-git/" title="Git的一般化使用流程" itemprop="url">Git的一般化使用流程</a>
   </h1>
   <p class="article-author">By
     
       <a href="https://plus.google.com/101562106204171850000?rel=author" title="TakWolf" target="_blank" itemprop="author">TakWolf</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-10-16T02:48:42.000Z" itemprop="datePublished">10月 16 2014</time>
-    更新日期:<time datetime="2014-10-16T03:52:41.000Z" itemprop="dateModified">10月 16 2014</time>
+    <time datetime="2014-11-25T19:06:06.000Z" itemprop="datePublished">11月 26 2014</time>
+    更新日期:<time datetime="2014-11-25T19:54:18.000Z" itemprop="dateModified">11月 26 2014</time>
     
   </p>
 </header>
@@ -105,69 +102,60 @@ Intent intent = new Intent(Intent.A">
 		
 		</div>
 		
-		<p>提到视频播放，有这么几种方法。</p>
-<p>1.调用系统播放器</p>
-<pre><code><span class="constant">Uri uri</span> = Uri.parse(Environment.getExternalStorageDirectory().getPath()+<span class="string">"/video.mp4"</span>);  
-<span class="constant">Intent intent</span> = new Intent(Intent.ACTION_VIEW);
-intent.setDataAndType(uri, <span class="string">"video/mp4"</span>); <span class="comment">//这句不要忘记，表明资源是视频类型</span>
-startActivity(intent);
-</code></pre><p>2.使用MediaPlayer和SurfaceView</p>
-<p>说实话，这种方式太过麻烦，代码就不粘贴了。其实还有更简单的下面的第三种方法。</p>
-<p>3.使用VideoView</p>
-<p>这个本身就是为了播放视频而设计的控件。通过查看基础树我们发现，其实他就是继承了SurfaceView并且实现了MediaPlayerControl，实质是第二种方式的一个封装，而使用起来要方便很多，视频在 start 调用之后自动加载，你也不需要去手动释放资源，控件都帮你处理了。</p>
-<p>一个非常简单的例子：</p>
-<pre><code>videoView = (VideoView) findViewById(R.id.video_view);
-videoView.setMediaController(<span class="keyword">new</span> MediaController(<span class="keyword">this</span>));
-Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+<span class="string">"/video.mp4"</span>);
-videoView.setVideoURI(uri);
-videoView.start();
-</code></pre><p>上面代码中的 setMediaController 可以添加一个媒体控制器，这是一个默认实现的控件，包括进度，暂停神马的，如果没有特殊的要求，功能基本也就够用了。当然，你也可以自己来实现。VideoView本身也提供媒体控制接口和监听器。</p>
-<p>Android系统默认支持的视频格式如下：</p>
-<pre><code><span class="comment">//Video</span>
-addFileType(<span class="string">"MP4"</span>, FILE_TYPE_MP4, <span class="string">"video/mp4"</span>);
-addFileType(<span class="string">"M4V"</span>, FILE_TYPE_M4V, <span class="string">"video/mp4"</span>);
-addFileType(<span class="string">"3GP"</span>, FILE_TYPE_3GPP, <span class="string">"video/3gpp"</span>);
-addFileType(<span class="string">"3GPP"</span>, FILE_TYPE_3GPP, <span class="string">"video/3gpp"</span>);
-addFileType(<span class="string">"3G2"</span>, FILE_TYPE_3GPP2, <span class="string">"video/3gpp2"</span>);
-addFileType(<span class="string">"3GPP2"</span>, FILE_TYPE_3GPP2, <span class="string">"video/3gpp2"</span>);
-addFileType(<span class="string">"WMV"</span>, FILE_TYPE_WMV, <span class="string">"video/x-ms-wmv"</span>);
-</code></pre><p>这里还有一个问题要特殊说明一下，VideoView 加载视频需要通过 Uri 或者 Path。上面的代码是从 SDCard 中加载视频的,Uri的构筑方式是：</p>
-<pre><code><span class="constant">Uri uri</span> = Uri.parse(Environment.getExternalStorageDirectory().getPath()+<span class="string">"/video.mp4"</span>);
-</code></pre><p>当然，有的时候我们可能并不是要制作一个视频播放器，而是仅仅加载一些应用内置视频，做些产品或者功能演示神马的。我们的第一个思路是将视频文件放到assets资源目录下。实际编码中我们发现AssetManager竟然不能够直接获取Path，也无法直接构筑Uri。我们按照以往的经验:</p>
-<pre><code>WebView webView = <span class="keyword">new</span> WebView(<span class="keyword">this</span>);
-webView.loadUrl(<span class="keyword">file</span>:<span class="comment">///android_asset/index.html);</span>
-</code></pre><p>实测这种方式在VideoView中无效，控件会提示视频无法播放，从调试信息来看，应该是控件无法找到视频路径。</p>
-<p>百度和Google基本无方案，stackoverflow上有一个解答：<a href="http://stackoverflow.com/questions/3746361/i-want-to-play-a-video-from-my-assets-or-raw-folder" target="_blank" rel="external">链接</a></p>
-<p>最终的方案是这样的：将视频文件放到 res/raw 文件夹中（注意res资源的命名规则） ，然后通过包名和 R 中的资源编号构筑Uri</p>
-<pre><code><span class="constant">Uri uri</span> = Uri.parse(<span class="string">"android.resource://"</span> + getPackageName() + <span class="string">"/"</span> + R.raw.video);
-</code></pre><p>最终的代码：</p>
-<pre><code>videoView = (VideoView) findViewById(R.id.video_view);
-videoView.setMediaController(<span class="keyword">new</span> MediaController(<span class="keyword">this</span>));
-Uri uri = Uri.parse(<span class="string">"android.resource://"</span> + getPackageName() + <span class="string">"/"</span> + R.raw.video);
-videoView.setVideoURI(uri);
-videoView.start();
-</code></pre><p>问题解决。</p>
-<p>最后附上一个<a href="http://www.open-open.com/lib/view/open1341754267229.html" target="_blank" rel="external">链接</a>，这里有三种比较详细的视频播放例子，主要是有一个MediaPlay的例子，虽然没用，但留个备份。</p>
-  
+		<p>对于Git，平时我愿意使用SourceTree（本人是Windows环境），命令使用的比较少。这里对Git的一般化使用流程做一个总结，也作为一个快速查找手册。</p>
+<a id="more"></a>
+
+<p>使用Git前，需要进行全局配置。该配置对整个系统有效，只需配置一次。以本人的情况为例：</p>
+<pre><code>$ git config --<span class="keyword">global</span> user.name <span class="string">"TakWolf"</span>
+$ git config --<span class="keyword">global</span> user.email takwolf<span class="variable">@foxmail</span>.com
+$ git config --<span class="keyword">global</span> push.<span class="keyword">default</span> matching
+$ git config --<span class="keyword">global</span> <span class="keyword">alias</span>.co checkout
+</code></pre><p>我们假设已经创建了一个应用，通过cd命令进入目录：</p>
+<pre><code>$ <span class="built_in">cd</span> workspace/hello_world_app
+</code></pre><p>首先初始化git：</p>
+<pre><code><span class="variable">$ </span>git init
+</code></pre><p>将所有文件放到仓库暂存区中：</p>
+<pre><code>$ git <span class="built_in">add</span> -A
+</code></pre><p>提交一个commit:</p>
+<pre><code><span class="variable">$ </span>git commit -m <span class="string">"Initialize repository"</span>
+</code></pre><p>以上两个命令可以合并为：</p>
+<pre><code>$ git commit <span class="operator">-a</span> -m <span class="string">"commit all"</span>
+</code></pre><p>或者</p>
+<pre><code>$ git commit -<span class="keyword">am</span> <span class="string">"commit all"</span>
+</code></pre><p>配置远端地址：</p>
+<pre><code>$ git remote <span class="built_in">add</span> origin http<span class="variable">s:</span>//github.<span class="keyword">com</span>/takwolf/hello-world-app.git
+</code></pre><p>推送到远端master分支：</p>
+<pre><code><span class="variable">$ </span>git push origin master
+</code></pre><hr>
+<p>命令的一些说明</p>
+<p>创建一个分支：</p>
+<pre><code><span class="variable">$ </span>git branch &lt;新分支名字&gt;
+</code></pre><p>切换到新分支:</p>
+<pre><code><span class="variable">$ </span>git checkout &lt;新分支名字&gt;
+</code></pre><p>加入一个新的远程端：</p>
+<pre><code><span class="input"><span class="prompt">$ git remote add &lt;远程端名字&gt;</span> &lt;地址&gt;</span>
+</code></pre><p>推送分支：</p>
+<pre><code><span class="variable">$ </span>git push origin &lt;新分支名字&gt;
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Android/">Android</a><a href="/tags/视频播放/">视频播放</a><a href="/tags/文件路径/">文件路径</a>
+  <span></span> <a href="/tags/git/">git</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Android/">Android</a>
+  <a class="article-category-link" href="/categories/git/">git</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://blog.takwolf.com/2014/10/16/android-video-view/" data-title="Android实现视频播放 | TakWolf" data-tsina="2132513694" class="share clearfix">
+  <div data-url="http://blog.takwolf.com/2014/11/26/normal-step-of-use-git/" data-title="Git的一般化使用流程 | TakWolf" data-tsina="2132513694" class="share clearfix">
   </div>
 
 </div>
@@ -176,19 +164,11 @@ videoView.start();
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/10/31/android-audio-record/" title="Android录音生成m4a格式音频">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  Android录音生成m4a格式音频</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/10/08/to-my-college-team/"  title="对我大学参加过的计算机创业团队部分人的一些牢骚">
+<a href="/2014/10/31/android-audio-record/"  title="Android录音生成m4a格式音频">
  <strong>NEXT:</strong><br/> 
- <span>对我大学参加过的计算机创业团队部分人的一些牢骚
+ <span>Android录音生成m4a格式音频
 </span>
 </a>
 </div>

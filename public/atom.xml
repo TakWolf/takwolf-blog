@@ -4,7 +4,7 @@
   <subtitle><![CDATA[我叫幻影狼人，是一个精神病程序猿]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.takwolf.com/"/>
-  <updated>2014-11-09T12:22:53.864Z</updated>
+  <updated>2014-11-25T19:54:24.981Z</updated>
   <id>http://blog.takwolf.com/</id>
   
   <author>
@@ -15,15 +15,70 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[android-audio-record]]></title>
+    <title><![CDATA[Git的一般化使用流程]]></title>
+    <link href="http://blog.takwolf.com/2014/11/26/normal-step-of-use-git/"/>
+    <id>http://blog.takwolf.com/2014/11/26/normal-step-of-use-git/</id>
+    <published>2014-11-25T19:06:06.000Z</published>
+    <updated>2014-11-25T19:54:18.000Z</updated>
+    <content type="html"><![CDATA[<p>对于Git，平时我愿意使用SourceTree（本人是Windows环境），命令使用的比较少。这里对Git的一般化使用流程做一个总结，也作为一个快速查找手册。</p>
+<a id="more"></a>
+
+<p>使用Git前，需要进行全局配置。该配置对整个系统有效，只需配置一次。以本人的情况为例：</p>
+<pre><code>$ git config --<span class="keyword">global</span> user.name <span class="string">"TakWolf"</span>
+$ git config --<span class="keyword">global</span> user.email takwolf<span class="variable">@foxmail</span>.com
+$ git config --<span class="keyword">global</span> push.<span class="keyword">default</span> matching
+$ git config --<span class="keyword">global</span> <span class="keyword">alias</span>.co checkout
+</code></pre><p>我们假设已经创建了一个应用，通过cd命令进入目录：</p>
+<pre><code>$ <span class="built_in">cd</span> workspace/hello_world_app
+</code></pre><p>首先初始化git：</p>
+<pre><code><span class="variable">$ </span>git init
+</code></pre><p>将所有文件放到仓库暂存区中：</p>
+<pre><code>$ git <span class="built_in">add</span> -A
+</code></pre><p>提交一个commit:</p>
+<pre><code><span class="variable">$ </span>git commit -m <span class="string">"Initialize repository"</span>
+</code></pre><p>以上两个命令可以合并为：</p>
+<pre><code>$ git commit <span class="operator">-a</span> -m <span class="string">"commit all"</span>
+</code></pre><p>或者</p>
+<pre><code>$ git commit -<span class="keyword">am</span> <span class="string">"commit all"</span>
+</code></pre><p>配置远端地址：</p>
+<pre><code>$ git remote <span class="built_in">add</span> origin http<span class="variable">s:</span>//github.<span class="keyword">com</span>/takwolf/hello-world-app.git
+</code></pre><p>推送到远端master分支：</p>
+<pre><code><span class="variable">$ </span>git push origin master
+</code></pre><hr>
+<p>命令的一些说明</p>
+<p>创建一个分支：</p>
+<pre><code><span class="variable">$ </span>git branch &lt;新分支名字&gt;
+</code></pre><p>切换到新分支:</p>
+<pre><code><span class="variable">$ </span>git checkout &lt;新分支名字&gt;
+</code></pre><p>加入一个新的远程端：</p>
+<pre><code><span class="input"><span class="prompt">$ git remote add &lt;远程端名字&gt;</span> &lt;地址&gt;</span>
+</code></pre><p>推送分支：</p>
+<pre><code><span class="variable">$ </span>git push origin &lt;新分支名字&gt;
+</code></pre>]]></content>
+    <summary type="html">
+    <![CDATA[<p>对于Git，平时我愿意使用SourceTree（本人是Windows环境），命令使用的比较少。这里对Git的一般化使用流程做一个总结，也作为一个快速查找手册。</p>
+]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://blog.takwolf.com/tags/git/"/>
+    
+      <category term="git" scheme="http://blog.takwolf.com/categories/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android录音生成m4a格式音频]]></title>
     <link href="http://blog.takwolf.com/2014/10/31/android-audio-record/"/>
     <id>http://blog.takwolf.com/2014/10/31/android-audio-record/</id>
     <published>2014-10-31T07:12:49.000Z</published>
-    <updated>2014-10-31T07:13:07.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="http://blog.csdn.net/yegongheng/article/details/40624267" target="_blank" rel="external">http://blog.csdn.net/yegongheng/article/details/40624267</a></p>
+    <updated>2014-11-25T19:46:56.000Z</updated>
+    <content type="html"><![CDATA[<p>一篇博文，十分详细，暂时记录</p>
+<p><a href="http://blog.csdn.net/yegongheng/article/details/40624267" target="_blank" rel="external">http://blog.csdn.net/yegongheng/article/details/40624267</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><a href="http://blog.csdn.net/yegongheng/article/details/40624267" target="_blank" rel="external">http://blog.csdn.net/yegongheng/article]]>
+    <![CDATA[<p>一篇博文，十分详细，暂时记录</p>
+<p><a href="http://blog.csdn.net/yegongheng/article/details/40624267" target="_blank" rel="external">http://blog.csdn.]]>
     </summary>
     
   </entry>
