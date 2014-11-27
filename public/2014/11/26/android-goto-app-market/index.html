@@ -4,18 +4,20 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>博客迁移完毕 | TakWolf</title>
+    <title>Android跳转到应用市场详细信息页面，可用于实现评分或者推荐功能 | TakWolf</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="TakWolf">
     
-    <meta name="description" content="国庆这几天别的事没干，折腾了好几宿，终于是吧个人博客搞定了。">
+    <meta name="description" content="要实现的功能很简单，用户点击“给应用评分”按钮，就会跳转到应用商店的详细信息页面。或者点击“更多应用”按钮跳转到商店搜索页面搜索开发者的相关应用。
+原理十分简单，构建一个ACTION_VIEW标记的Intent，并给一个如下结构的Uri即可：
+&quot;market://details?id=&quot; + get">
     
     
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="takgdx" />
-    <meta name="twitter:title" content="博客迁移完毕 | TakWolf" />
+    <meta name="twitter:title" content="Android跳转到应用市场详细信息页面，可用于实现评分或者推荐功能 | TakWolf" />
       
     
     
@@ -82,15 +84,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/10/06/blog-finished/" title="博客迁移完毕" itemprop="url">博客迁移完毕</a>
+      <a href="/2014/11/26/android-goto-app-market/" title="Android跳转到应用市场详细信息页面，可用于实现评分或者推荐功能" itemprop="url">Android跳转到应用市场详细信息页面，可用于实现评分或者推荐功能</a>
   </h1>
   <p class="article-author">By
     
       <a href="https://plus.google.com/101562106204171850000?rel=author" title="TakWolf" target="_blank" itemprop="author">TakWolf</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-10-05T18:03:58.000Z" itemprop="datePublished">10月 6 2014</time>
-    更新日期:<time datetime="2014-10-08T14:55:02.000Z" itemprop="dateModified">10月 8 2014</time>
+    <time datetime="2014-11-26T09:48:29.000Z" itemprop="datePublished">11月 26 2014</time>
+    更新日期:<time datetime="2014-11-26T10:38:49.000Z" itemprop="dateModified">11月 26 2014</time>
     
   </p>
 </header>
@@ -102,32 +104,51 @@
 		
 		</div>
 		
-		<p>国庆这几天别的事没干，折腾了好几宿，终于是吧个人博客搞定了。</p>
-<a id="more"></a>
-
-<p>之前写博客，也用了好几个平台了，CSDN、博客园、点点，也自己折腾过Wordpress啥的，都不是很满意。静态博客之前用过Jekyll，觉得不是很方便。现在的框架用的是Hexo，真心觉得简单方便好用啊。网站托管在gitcafe上，用法跟github page相同，但是国内访问速度真心不错啊。</p>
-<p>现在逐渐的有时间了，博客会写的更多一些。之前写的一些也会整理一下慢慢迁移过来。Hexo的搭建，过段时间也会把方法和心得整理在博客上。总之从现在开始，重新开一个好头吧。</p>
-<p>Hexo的主页：<a href="http://hexo.io/" target="_blank" rel="external">http://hexo.io</a></p>
+		<p>要实现的功能很简单，用户点击“给应用评分”按钮，就会跳转到应用商店的详细信息页面。或者点击“更多应用”按钮跳转到商店搜索页面搜索开发者的相关应用。</p>
+<p>原理十分简单，构建一个<code>ACTION_VIEW</code>标记的<code>Intent</code>，并给一个如下结构的Uri即可：</p>
+<pre><code><span class="string">"market://details?id="</span> + getPackageName() <span class="comment">//商店中使用包名来唯一标识区分应用</span>
+</code></pre><p>在Android平台上，正常情况下手机中的应用商店应该是Google Play，但是由于各种你懂我也懂的原因，国内基本上无法使用Google Play服务。<br>好在广泛的第三方应用市场大多都实现了这个接口。</p>
+<p>代码注释很详细：</p>
+<pre><code><span class="comment">//这里开始执行一个应用市场跳转逻辑，默认this为Context上下文对象</span>
+Intent intent = <span class="keyword">new</span> Intent(Intent.ACTION_VIEW);
+intent.setData(Uri.parse(<span class="string">"market://details?id="</span> + getPackageName())); <span class="comment">//跳转到应用市场，非Google Play市场一般情况也实现了这个接口</span>
+<span class="comment">//存在手机里没安装应用市场的情况，跳转会包异常，做一个接收判断</span>
+<span class="keyword">if</span> (intent.resolveActivity(getPackageManager()) != <span class="literal">null</span>) { <span class="comment">//可以接收</span>
+    startActivity(intent);
+} <span class="keyword">else</span> { <span class="comment">//没有应用市场，我们通过浏览器跳转到Google Play</span>
+    intent.setData(Uri.parse(<span class="string">"https://play.google.com/store/apps/details?id="</span> + getPackageName()));
+    <span class="comment">//这里存在一个极端情况就是有些用户浏览器也没有，再判断一次</span>
+    <span class="keyword">if</span> (intent.resolveActivity(getPackageManager()) != <span class="literal">null</span>) { <span class="comment">//有浏览器</span>
+        startActivity(intent);
+    } <span class="keyword">else</span> { <span class="comment">//天哪，这还是智能手机吗？</span>
+        Toast.makeText(<span class="keyword">this</span>, <span class="string">"天啊，您没安装应用市场，连浏览器也没有，您买个手机干啥？"</span>, Toast.LENGTH_SHORT).show();
+    }
+}
+</code></pre><p>需要注意的就是，如果界面跳转失败，会抛出异常，因此能否跳转需要进行判断。</p>
+<p>根据以上，同理使用以下Uri进行替换：</p>
+<pre><code>Uri.parse(<span class="string">"market://search?q=pub:Author Name"</span>); <span class="comment">//跳转到商店搜索界面，并搜索开发者姓名</span>
+Uri.parse(<span class="string">"market://search?q=Keyword"</span>); <span class="comment">//跳转到商店搜索界面，并搜索关键词</span>
+</code></pre><p>参考链接：<br><a href="http://stackoverflow.com/questions/4702204/android-market-detailsid-not-working-for-app" target="_blank" rel="external">http://stackoverflow.com/questions/4702204/android-market-detailsid-not-working-for-app</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/hexo/">hexo</a><a href="/tags/tucao/">吐槽</a>
+  <span></span> <a href="/tags/Android/">Android</a><a href="/tags/应用市场/">应用市场</a>
   </div>
 
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/tucao/">吐槽</a>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
 </div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://blog.takwolf.com/2014/10/06/blog-finished/" data-title="博客迁移完毕 | TakWolf" data-tsina="2132513694" class="share clearfix">
+  <div data-url="http://blog.takwolf.com/2014/11/26/android-goto-app-market/" data-title="Android跳转到应用市场详细信息页面，可用于实现评分或者推荐功能 | TakWolf" data-tsina="2132513694" class="share clearfix">
   </div>
 
 </div>
@@ -137,18 +158,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/10/08/to-my-college-team/" title="对我大学参加过的计算机创业团队部分人的一些牢骚">
+ <a href="/2014/11/26/ruby-study-setup-ruby-on-windows/" title="【Ruby学习笔记】在Windows上搭建Ruby on Rails环境">
   <strong>PREVIOUS:</strong><br/>
   <span>
-  对我大学参加过的计算机创业团队部分人的一些牢骚</span>
+  【Ruby学习笔记】在Windows上搭建Ruby on Rails环境</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2014/09/23/lntuonline-build-30/"  title="辽工大教务在线Android客户端v1.2.6发布">
+<a href="/2014/11/26/normal-step-of-use-git/"  title="Git的一般化使用流程">
  <strong>NEXT:</strong><br/> 
- <span>辽工大教务在线Android客户端v1.2.6发布
+ <span>Git的一般化使用流程
 </span>
 </a>
 </div>
