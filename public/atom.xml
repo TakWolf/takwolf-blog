@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[TakWolf]]></title>
-  <subtitle><![CDATA[想精神病一样写代码 - coding like psychopath]]></subtitle>
+  <subtitle><![CDATA[精神病一样编码 - Coding like a psychopath, oh ye~]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.takwolf.com/"/>
-  <updated>2014-11-27T01:44:20.890Z</updated>
+  <updated>2014-11-27T17:50:39.292Z</updated>
   <id>http://blog.takwolf.com/</id>
   
   <author>
@@ -13,6 +13,38 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[重新制作了主页，Just Author Home Page]]></title>
+    <link href="http://blog.takwolf.com/2014/11/28/new-just-author-home-page/"/>
+    <id>http://blog.takwolf.com/2014/11/28/new-just-author-home-page/</id>
+    <published>2014-11-27T17:39:07.000Z</published>
+    <updated>2014-11-27T17:50:33.000Z</updated>
+    <content type="html"><![CDATA[<p>新主页更换，浏览地址</p>
+<p><a href="http://takwolf.com" target="_blank" rel="external">http://takwolf.com</a></p>
+<p>还是喜欢简洁的风格，之前的控制台移动到这个地址了：</p>
+<p><a href="http://takwolf.com/console" target="_blank" rel="external">http://takwolf.com/console</a></p>
+<p>代码依然托管在Github上，使用注意替换成你自己的信息：</p>
+<p><a href="https://github.com/TakWolf/Just-Author-Home-Page" target="_blank" rel="external">https://github.com/TakWolf/Just-Author-Home-Page</a></p>
+<p>就是这样，have fun~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>新主页更换，浏览地址</p>
+<p><a href="http://takwolf.com" target="_blank" rel="external">http://takwolf.com</a></p>
+<p>还是喜欢简洁的风格，之前的控制台移动到这个地址了：</p>]]>
+    </summary>
+    
+      <category term="吐槽" scheme="http://blog.takwolf.com/tags/tucao/"/>
+    
+      <category term="新主页" scheme="http://blog.takwolf.com/tags/%E6%96%B0%E4%B8%BB%E9%A1%B5/"/>
+    
+      <category term="html5" scheme="http://blog.takwolf.com/tags/html5/"/>
+    
+      <category term="web" scheme="http://blog.takwolf.com/tags/web/"/>
+    
+      <category term="吐槽" scheme="http://blog.takwolf.com/categories/tucao/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[【Ruby学习笔记】在Windows上搭建Ruby on Rails环境]]></title>

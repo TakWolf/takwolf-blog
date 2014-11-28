@@ -1,6 +1,6 @@
 ##### Menu
 menu:
-  主页: /
+  主页: http://takwolf.com
   归档: /archives
   分类: /categories
   标签: /tags
@@ -15,7 +15,6 @@ menu:
 
 #### Widgets
 widgets:
-- rss
 - category
 - archive
 - tag
@@ -24,6 +23,8 @@ widgets:
 - weibo
 ## provide six widgets:category,tag,rss,archive,tagcloud,links.
 ## modify links in `/layout/_widget/links.ejs`.
+
+- rss
 
 #### RSS
 rss: /atom.xml
