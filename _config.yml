@@ -4,7 +4,7 @@
 
 # Site
 title: TakWolf
-subtitle: 精神病一样编码 - Coding like a psychopath, oh ye~
+subtitle: 我是个精神病。虽然我说我是个精神病，但其实我是中二病。
 description: TakWolf 幻影狼人
 author: TakWolf
 email: takwolf@foxmail.com
@@ -82,7 +82,7 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: pacman
+theme: persona-color
 exclude_generator:
 plugins:
 - hexo-generator-feed

@@ -1,0 +1,37 @@
+#You can eidt the color scheme in source/css/_base/variable.styl
+
+photo: http://takwolf.com/img/avatar.png
+
+email: # takwolf@foxmail.com
+twitter: https://twitter.com/takgdx
+facebook: https://www.facebook.com/hero.takwolf
+googleplus: # https://plus.google.com/u/0/101562106204171844130/posts
+github: https://github.com/takwolf
+pinterest: 
+linkedin: 
+instagram: 
+zhihu:
+weibo: http://weibo.com/takwolf
+renren: 
+
+
+addthis:
+  enable: false
+  pubid:
+  facebook: true
+  twitter: true
+  google: true
+  pinterest: true
+
+fancybox: true
+
+#
+bighomepage: true
+
+#Use cdnjs' CDN
+usecdn: false
+
+google_analytics:
+rss: /atom.xml
+
+forvirgo: true
