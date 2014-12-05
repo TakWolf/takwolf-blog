@@ -6,7 +6,7 @@ date: 2014-09-01 00:00:00
 
 祖籍辽宁，现居北京，程序猿。主修Android和Web开发，痴迷于Ruby和NodeJs，痛恨Javascript。梦想很远大，水平比较菜。
 
-我工作在[考拉成群的山上](http://coloshine.com)。
+我目前工作在[考拉成群的山上](http://coloshine.com)。
 
 ### TakWolf ###
 
@@ -32,7 +32,7 @@ date: 2014-09-01 00:00:00
 
 ### Community ###
 
-- [开源中国](http://my.oschina.net/takwolf)
+- [OSChina](http://my.oschina.net/takwolf)
 
 - [V2EX](http://v2ex.com/member/TakWolf)
 
