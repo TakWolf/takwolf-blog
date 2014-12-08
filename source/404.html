@@ -23,11 +23,31 @@
             font-family: "微软雅黑", "黑体";
             padding: 20px;
         }
+        #tip {
+            width: 280px;
+            margin: auto auto;
+            text-align: center;
+            padding: 20px;
+            color: #ffffff;
+            background-color: rgba(0,0,0,0.9);
+            border-radius: 10px;
+        }
+        #tip a {
+            color: #00ff00;
+        }
+        #tip span {
+            color: #ff0000;
+        }
     </style>
 </head>
 <body>
 
+    <div id="tip">
+        <h3><span>*警告：</span>现在返回<a href="http://takwolf.com">首页</a>还来得及！</h3>
+    </div>
+
     <img id="img" src="http://takwolf.com/img/404.gif" width="200" height="200">
+
     <div id="blueScreen">
         A problem has been detected and windows has been shut down to prevent damage<br>
         to your computer.<br>
@@ -59,6 +79,19 @@
     </div>
 
     <script>
+
+        adjustTip();
+
+        window.onresize = function(event) {
+            adjustTip();
+        }
+
+        function adjustTip() {
+            var tip = document.getElementById('tip');
+            tip.style.position = 'fixed';
+            tip.style.left = (window.innerWidth - tip.clientWidth) / 2 + 'px';
+            tip.style.bottom = 50 + 'px';
+        }
 
         var img = document.getElementById('img');
         img.style.position = 'fixed';
