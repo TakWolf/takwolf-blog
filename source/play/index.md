@@ -7,3 +7,7 @@ date: 2014-12-09 00:00:00
 - [打灰机游戏 - Html5 Canvas嵌入测试](shoot.html)
 
 - [Miku - 《Melody Line》 - 视频嵌入测试](miku.html)
+
+<br>
+
+- [其他的一些有趣的东西](http://takwolf.com/projects/)
