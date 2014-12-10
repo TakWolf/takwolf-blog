@@ -1,7 +1,7 @@
-title: Git的一般化使用流程
+title: 【Git笔记】Git的一般化使用流程
 date: 2014-11-26 03:06:06
 categories: git
-tags: [git]
+tags: [git,备忘]
 ---
 对于Git，平时我愿意使用SourceTree（本人是Windows环境），命令使用的比较少。这里对Git的一般化使用流程做一个总结，也作为一个快速查找手册。
 
