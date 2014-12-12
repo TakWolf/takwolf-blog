@@ -33,7 +33,7 @@ rss: /atom.xml
 #### Image
 imglogo:
   enable: true             ## display image logo true/false.
-  src: img/konata.gif  #img/ninja_run.gif        ## `.svg` and `.png` are recommended,please put image into the theme folder `/pacman/source/img`.
+  src: img/konata-r.gif  #img/ninja_run.gif        ## `.svg` and `.png` are recommended,please put image into the theme folder `/pacman/source/img`.
 favicon: img/favicon.ico   ## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/pacman/source/img`.     
 apple_icon: img/pacman.png ## size:114px*114px,please put image into the theme folder `/pacman/source/img`.
 
