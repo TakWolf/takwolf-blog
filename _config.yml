@@ -91,5 +91,5 @@ plugins:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: github
-  repository: https://gitcafe.com/TakWolf/TakWolf.git
+  repository: https://gitcafe.com/TakWolfBlog/TakWolfBlog.git
   branch: gitcafe-pages
