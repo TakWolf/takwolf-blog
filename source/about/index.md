@@ -2,9 +2,7 @@ title: About Me
 date: 2014-09-01 00:00:00
 ---
 
-本人性别男，爱好女。90后。双子座。强迫症患者。精神病晚期。二次元人士。天然宅。略中二。8bit收集狂。喵和Doge控。推理小说爱好者。打乒乓。喜欢探索和思考。
-
-祖籍辽宁，现居北京，程序猿。主修Android和Web开发，痴迷于Ruby和NodeJs，痛恨Javascript。梦想很远大，水平比较菜。
+一个只会写一点Java和Android的菜B。
 
 我目前工作在[考拉成群的山上](http://coloshine.com)。
 
