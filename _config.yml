@@ -7,7 +7,7 @@ title: TakWolf 's Blog
 subtitle: A 2B Code Monkey
 description: Eat Sleep Code Repeat
 author: TakWolf
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -78,6 +78,16 @@ deploy:
 # NexT Theme configuration
 # =============================================================================
 
+# 头像
+avatar: /img/avatar.png
+
+# 友情链接
+# title, chinese available
+links_title: Links
+# links
+links:
+  # Home: http://takwolf.com/
+  
 # 多说帐号
 duoshuo_shortname: blog-takwolf
 
