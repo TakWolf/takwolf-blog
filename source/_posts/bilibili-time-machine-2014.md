@@ -6,8 +6,6 @@ tags: [B站,bilibili,吐槽]
 
 B站2014年时光机，无需多说。
 
-<!-- more -->
-
 [http://www.bilibili.com/html/time_machine2014.html](http://www.bilibili.com/html/time_machine2014.html)
 
 ![bilibili-time-machine-2014](/img/445245_3265905669cb.png)
