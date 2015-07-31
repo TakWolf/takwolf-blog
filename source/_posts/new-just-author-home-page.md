@@ -3,7 +3,10 @@ date: 2014-11-28 01:39:07
 categories: 吐槽
 tags: [吐槽,新主页,html5,web]
 ---
-新主页更换，浏览地址
+
+更换新主页
+
+<!-- more -->
 
 [http://takwolf.com](http://takwolf.com)
 

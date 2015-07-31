@@ -5,6 +5,8 @@ tags: [Java,Jdk,Ubuntu]
 ---
 最近公司项目需要编译Android本地库，Windows一直不成功，遂安装了Linux环境。记录一下Jdk的环境配置，作为学习笔记。
 
+<!-- more -->
+
 Linux为Ubuntu14。
 
 去[官网](http://www.oracle.com/technetwork/java/javase/downloads/index.html)下载jdk，笔者下载的是jdk-8u25-linux-x64.tar.gz。

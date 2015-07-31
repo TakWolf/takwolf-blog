@@ -1024,6 +1024,22 @@ Haskell ("haskell", "hs")
 * ``foreign``:          FFI declaration
 * ``shebang``:          shebang line
 
+Elm ("elm")
+-------------------------
+
+* ``comment``:          comment
+* ``keyword``:          keyword
+* ``number``:           number
+* ``string``:           string
+* ``title``:            function or variable name
+* ``type``:             value or type constructor name (i.e. capitalized)
+* ``container``:        (..., ...) or {...; ...} list in declaration or record
+* ``module``:           module declaration
+* ``import``:           import declaration
+* ``typedef``:          type declaration (type, type alias)
+* ``infix``:            infix declaration
+* ``foreign``:          javascript interop declaration
+
 Erlang ("erlang", "erl")
 ------------------------
 
@@ -1367,6 +1383,18 @@ PF ("pf", "pf.conf")
 * ``string``:           string
 * ``variable``:         used for both macros and tables
 
+XQuery ("xpath", "xq")
+----------------------
+
+* ``keyword``:          instruction keyword
+* ``literal``:          words representing special values, e.g. all, egress
+* ``comment``:          comment
+* ``number``:           number
+* ``string``:           string
+* ``variable``:         variable
+* ``decorator``:        annotations
+* ``function``:         function
+
 C/AL ("cal")
 ------------
 
@@ -1445,3 +1473,16 @@ ARM assembler ("armasm", "arm")
 * ``label``:            label
 * ``preprocessor``:     preprocessor directive
 * ``title``:            symbol versions
+
+AutoIt ("autoit")
+-------------------------
+
+* ``keyword``:          keyword
+* ``literal``:          True, False, And, Null, Not, Or
+* ``built_in``:         built-in functions and UDF
+* ``constant``:     	constant, macros
+* ``variable``:         variables
+* ``string``:           string
+* ``comment``:          comment
+* ``number``:           number
+* ``preprocessor``:     AutoIt3Wrapper directives section

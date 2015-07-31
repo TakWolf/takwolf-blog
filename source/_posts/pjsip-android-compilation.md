@@ -5,6 +5,8 @@ tags: [PJSIP,Android]
 ---
 最近公司要实现一个IP电话的功能，选择了[PJSIP](http://www.pjsip.org/)这个框架。服务端部分团队大牛已经搞完了，Android这块还要实现一个SIP客户端。安装官方文档编译Hello World，整个过程就是一个字：坑爹一坨坨。
 
+<!-- more -->
+
 最开始是在Windows环境上编译，由于编译依赖于Bash命令以及swig，还有坑爹的Windows和Unix换行符转换的问题，是在解决无力。更换到Ubuntu之后编译通过了，在运行时报错：
 
 ```cannot locate symbol "rand" referenced by "libpjsua.so"```

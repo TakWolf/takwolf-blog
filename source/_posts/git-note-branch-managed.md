@@ -4,6 +4,10 @@ categories: git
 tags: [git,备忘]
 ---
 
+笔记
+
+<!-- more -->
+
 ## 创建分支 ##
 
 创建一个新分支：

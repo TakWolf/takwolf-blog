@@ -6,6 +6,8 @@ tags: [Android,视频播放,文件路径]
 
 提到视频播放，有这么几种方法。
 
+<!-- more -->
+
 1.调用系统播放器
 
     Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/video.mp4");  
