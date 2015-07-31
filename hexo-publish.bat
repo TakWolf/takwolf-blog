@@ -1,1 +1,1 @@
-/usr/local/bin/hexo deploy --generate
+hexo deploy --generate
