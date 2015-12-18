@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: TakWolf 's Blog
+title: TakWolf's Blog
 subtitle: A 2B Code Monkey
 description: Eat Sleep Code Repeat
 author: TakWolf
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: next
+theme: landscape
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
@@ -71,66 +71,4 @@ deploy:
   type: git
   repo: https://gitcafe.com/TakWolfBlog/TakWolfBlog.git
   branch: gitcafe-pages
-  message:
-  
-  
-# =============================================================================
-# NexT Theme configuration
-# =============================================================================
-
-# 头像
-avatar: /img/avatar.png
-
-# 友情链接
-# title, chinese available
-links_title: Links
-# links
-links:
-  # Home: http://takwolf.com/
-  
-# 多说帐号
-duoshuo_shortname: blog-takwolf
-
-# DISQUS 帐号 （如果已经设置 多说 帐号，此选项将被跳过）
-disqus_shortname: blog-takwolf
-
-# JiaThis 分享服务
-jiathis: false
-
-# 多说 分享服务（必须启用多说）
-duoshuo_share: false
-
-# 社交链接，将在侧栏中显示
-social:
-  GitHub: https://github.com/takwolf
-  Facebook: https://facebook.com/hero.takwolf
-  Twitter: https://twitter.com/takgdx
-  Weibo: http://weibo.com/takwolf
-  # 等等
-
-
-# Creative Commons 4.0 International License.
-# http://creativecommons.org/
-# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-creative_commons: by-nc-sa
-
-
-# Google 站长工具验证，请选择 `HTML Meta` 验证方式
-# See: https://www.google.com/webmasters/
-google_site_verification: JTaCNLsOuSIYJA_INHvTuTQ3ojx8U_3I4xdqlsMYAeQ
-
-
-# Google 分析 ID
-# See: http://www.google.com/analytics/
-google_analytics: UA-65835217-1
-
-
-# 百度统计 ID，此 ID 是百度统计提供脚本中 hm.js? 后面那串字符，非百度统计帐号
-baidu_analytics: 4f6783023cf9e9cfebf54cebb0786835
-
-# 站点起始时间
-since: 2014
-
-# =============================================================================
-# End NexT Theme configuration
-# =============================================================================
+  message: The quick brown fox jumps over the lazy dog
