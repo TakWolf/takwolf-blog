@@ -1,12 +1,12 @@
 title: 再见，暖丘 - See you again
-date: 2016-10-01 20:43:36
+date: 2016-10-01 21:18:36
 categories:
 tags:
 ---
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=30953009&auto=1&height=66"></iframe>
 
-暖丘将于10月2日关闭，距离写下这段文字，已经剩余不到4个小时了。
+暖丘将于10月2日关闭，距离写下这段文字，已经剩余不到3个小时了。
 
 AppStore已经搜索不到了，服务器也将在零点关闭。
 
