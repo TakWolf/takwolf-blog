@@ -10,3 +10,6 @@ tags: [Android]
 
 解决方法：
 进入刚安装的Android Studio目录下的bin目录。找到idea.properties文件，用文本编辑器打开。在idea.properties文件末尾添加一行： disable.android.first.run=true ，然后保存文件。关闭Android Studio后重新启动。
+
+2016-10-16 Update:
+这是一个古老的问题了，新版已经没有这个问题了

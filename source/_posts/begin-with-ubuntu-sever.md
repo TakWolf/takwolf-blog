@@ -1,10 +1,12 @@
-title: Ubuntu配置笔记
+title: Ubuntu初始化配置笔记
 date: 2016-10-15 01:37:39
 categories: Ubuntu
 tags: [Ubuntu,安全配置]
 ---
 
 之前服务器有被入侵过的经历，吃一堑长一智。稍微也研究了一些安全方面的配置，做个笔记。
+
+<!-- more -->
 
 系统版本为Ubuntu，已开启ssh
 

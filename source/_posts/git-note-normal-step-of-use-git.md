@@ -8,7 +8,7 @@ tags: [git,备忘]
 <!-- more -->
 
 使用Git前，需要进行全局配置。该配置对整个系统有效，只需配置一次。以本人的情况为例：
-    
+
     $ git config --global user.name "TakWolf"
     $ git config --global user.email takwolf@foxmail.com
     $ git config --global push.default matching
@@ -64,3 +64,7 @@ tags: [git,备忘]
 推送分支：
 
     $ git push origin <新分支名字>
+
+#################
+
+搞到最后，还是觉得GUI方便，回GUI去了
