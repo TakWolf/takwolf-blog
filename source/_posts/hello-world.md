@@ -1,7 +1,7 @@
 title: Hello World
 date: 2014-01-01 00:00:00
-categories:
-tags:
+categories: 吐槽
+tags: [HelloWorld,吐槽]
 ---
 这是Hexo默认生成的一篇文章，也就是Hello World，内容是如何发布一篇文章。就把他保留下来吧！
 

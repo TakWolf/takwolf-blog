@@ -1,7 +1,7 @@
 title: Android录音生成m4a格式音频
 date: 2014-10-31 15:12:49
-categories:
-tags:
+categories: Android
+tags: [Android,音频播放]
 ---
 
 一篇博文，十分详细，暂时记录

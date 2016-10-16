@@ -36,7 +36,7 @@ tags: [Android,视频播放,文件路径]
 Android系统默认支持的视频格式如下：
 
     //Video
-	addFileType("MP4", FILE_TYPE_MP4, "video/mp4");
+	  addFileType("MP4", FILE_TYPE_MP4, "video/mp4");
     addFileType("M4V", FILE_TYPE_M4V, "video/mp4");
     addFileType("3GP", FILE_TYPE_3GPP, "video/3gpp");
     addFileType("3GPP", FILE_TYPE_3GPP, "video/3gpp");
@@ -62,7 +62,7 @@ Android系统默认支持的视频格式如下：
     Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
 
 最终的代码：
-	
+
 	videoView = (VideoView) findViewById(R.id.video_view);
     videoView.setMediaController(new MediaController(this));
 	Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
