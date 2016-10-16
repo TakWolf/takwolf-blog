@@ -10,9 +10,9 @@ JDK去官网下载OracleJDK，不要用Ubuntu自带的OpenJDK，有很多问题
 
 ```
 # Java
-export JAVA_HOME=~/cellark1.8.0_102
+export JAVA_HOME=~/cellar/jdk1.8.0_102
 export JRE_HOME=$JAVA_HOME/jre
-export CLASSPATH=.:$JAVA_HOMEb:$JRE_HOMEb:$CLASSPATH
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 
 # Gradle
