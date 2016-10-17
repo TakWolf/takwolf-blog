@@ -58,7 +58,11 @@ date: 2016-06-22 00:00:00
 
 [Google Play开发者页面](https://play.google.com/store/apps/dev?id=8404221645429241118)
 
-[个人博客](http://blog.takwolf.com)
+[个人主页](https://www.takwolf.com)
+
+[个人博客](https://blog.takwolf.com)
+
+[作品集合](https://play.takwolf.com)
 
 ## 联系方式 ##
 
