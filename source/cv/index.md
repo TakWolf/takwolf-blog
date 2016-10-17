@@ -2,7 +2,7 @@
 title: 个人简历
 date: 2016-06-22 00:00:00
 ---
-![avatar](img/avatar.png)
+![](/img/avatar_real.png)
 
 ## 基本情况 ##
 
@@ -22,7 +22,7 @@ date: 2016-06-22 00:00:00
 
 ## 求职意向 ##
 
-目前是**自由职业**。
+目前是**自由职业**。（2016-06-22）
 
 希望能够加入一个有创意的移动互联网团队。
 
@@ -40,6 +40,10 @@ date: 2016-06-22 00:00:00
 
 - Java (Spring Boot, JFinal, Restful, Jsoup)
 
+- MariaDB，Redis，MongoDB
+
+- 使用 Git
+
 - 业余研究过一些游戏和图形图像相关的技术（SDL2, love2d, libGDX, OpenGL）
 
 - 中等水平的 Linux
@@ -55,6 +59,10 @@ date: 2016-06-22 00:00:00
 [Google Play开发者页面](https://play.google.com/store/apps/dev?id=8404221645429241118)
 
 [个人博客](http://blog.takwolf.com)
+
+## 联系方式 ##
+
+[takwolf@foxmail.com](mailto:takwolf@foxmail.com)
 
 ## 工作经历 ##
 
@@ -145,11 +153,3 @@ date: 2016-06-22 00:00:00
 > 爬虫部分使用Jsoup实现，后台接口第一版使用JFinal实现，后期改用JAX-RS和spring来实现Restful风格接口。目前线上使用Express（Node）实现。
 
 > 主要负责了前两版的后端以及Android客户端的实现，目前除了Android客户端外，其他部分已经由校友维护。
-
-## 联系方式 ##
-
-[takwolf@foxmail.com](mailto:takwolf@foxmail.com)
-
-## 更新日期 ##
-
-2016-06-22
