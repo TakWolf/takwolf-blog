@@ -196,3 +196,15 @@ MariaDB [(none)]> FLUSH PRIVILEGES;
 ```
 MariaDB [(none)]> select host, user from mysql.user;
 ```
+
+## 开启远程访问 ##
+
+想要开启远程访问，除了在上一个步骤中，把`mysql.user`表中的`host`修改为`%`之外，
+还需要保证，在配置文件`/etc/mysql/my.cnf`中，下面这项是注释掉的：
+
+```
+[mysqld]
+bind-address = 127.0.0.1
+```
+
+如果这一项没有注释掉，则 MariaDB 只会监听来自本地的连接，不会接收远程连接。
