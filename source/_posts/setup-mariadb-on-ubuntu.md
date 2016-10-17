@@ -152,10 +152,10 @@ $ sudo /etc/init.d/mysql restart
 创建用户的命令如下：
 
 ```
-MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO user@localhost IDENTIFIED BY password WITH GRANT OPTION;
 ```
-其中，`user'@'localhost`表示用户名允许在什么地址下访问，这里是本地。
-如果你希望用户可以在任何地址下访问，格式为`user'@'%`，使用通配符。
+其中，`user@localhost`表示用户名允许在什么地址下访问，这里是本地。
+如果你希望用户可以在任何地址下访问，格式为`user@%`，使用通配符。
 后面的`password`是用户的密码。
 前面的`ALL PRIVILEGES ON *.*`表示授权所有权限在所有数据库上。
 权限细分如下：
