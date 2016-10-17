@@ -1,6 +1,6 @@
 ---
 title: 关于我
-date: 2014-09-01 00:00:00
+date: 2016-06-01 00:00:00
 ---
 一个：
 
@@ -16,7 +16,9 @@ date: 2014-09-01 00:00:00
 
 只做自己喜欢的和感兴趣的技术，不是全栈，也不想成为全栈工程师。
 
-我目前工作在[考拉成群的山上](http://coloshine.com)。
+曾经工作与[考拉山团队](http://coloshine.com)，目前是自由职业。
+
+我的简历：[http://blog.takwolf.com/cv](http://blog.takwolf.com/cv)
 
 ### TakWolf ###
 
