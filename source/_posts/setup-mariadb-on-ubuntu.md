@@ -86,3 +86,28 @@ installation should now be secure.
 
 Thanks for using MariaDB!
 ```
+
+如果你是生产环境，建议全部直接按回车。
+
+## 修改默认端口号 ##
+
+查看 MariaDB 端口号，需要先进入 MariaDB 控制台
+
+```
+$ mysql -u root -p
+```
+
+我这里 root 用户设置了密码，所以需要输入密码。
+之后在 MariaDB 控制台键入如下命令：
+
+```
+MariaDB [(none)]> show global variables like 'port';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| port          | 3306  |
++---------------+-------+
+1 row in set (0.00 sec)
+```
+
+注意，这里的命令其实都是 Sql 命令，结尾不要忘记添加分号。
