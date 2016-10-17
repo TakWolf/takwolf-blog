@@ -110,4 +110,38 @@ MariaDB [(none)]> show global variables like 'port';
 1 row in set (0.00 sec)
 ```
 
-注意，这里的命令其实都是 Sql 命令，结尾不要忘记添加分号。
+注意，这里的命令其实是 Sql 命令，结尾不要忘记添加分号。
+退出 MariaDB 控制台的命令是：
+
+```
+MariaDB [(none)]> quit
+```
+
+或者
+
+```
+MariaDB [(none)]> exit
+```
+
+MariadB 的配置文件在`/etc/mysql/my.cnf`
+这里有两个关于`port`的配置。
+
+`[client]`节点下面的`port`表示你用 MariaDB 工具去访问远程服务器的时候，连接远端的默认接口
+举个例子，你可以这样去访问远端的数据库：
+
+```
+$ mysql -u root -p -h 192.168.0.5
+$ mysql -u root -p -h 192.168.0.5 -P 3306
+```
+
+第一种方式，用的就是`[client]`节点下面的`port`配置作为默认连接端口
+第二种方式，则是手动指定端口
+
+`[mysqld]`节点下面也有一个`port`配置，这个是本地的数据库的端口号。
+我们修改这里的数据，修改之后需要重启 MariaDB，这里可能需要 root 权限
+
+```
+$ sudo /etc/init.d/mysql restart
+```
+
+再次查看，端口就应该修改了。
