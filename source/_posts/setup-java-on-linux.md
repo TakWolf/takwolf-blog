@@ -10,7 +10,7 @@ tags:
 - Maven
 - Linux
 ---
-笔记
+笔记。
 
 <!-- more -->
 
