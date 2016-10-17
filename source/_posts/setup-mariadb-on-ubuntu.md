@@ -138,10 +138,61 @@ $ mysql -u root -p -h 192.168.0.5 -P 3306
 第二种方式，则是手动指定端口
 
 `[mysqld]`节点下面也有一个`port`配置，这个是本地的数据库的端口号。
-我们修改这里的数据，修改之后需要重启 MariaDB，这里可能需要 root 权限
+我们修改这里的数据。
+修改之后需要重启 MariaDB，这里可能需要 root 权限
 
 ```
 $ sudo /etc/init.d/mysql restart
 ```
 
 再次查看，端口就应该修改了。
+
+## 创建一个用户 ##
+
+创建用户的命令如下：
+
+```
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+```
+其中，`user'@'localhost`表示用户名允许在什么地址下访问，这里是本地。
+如果你希望用户可以在任何地址下访问，格式为`user'@'%`，使用通配符。
+后面的`password`是用户的密码。
+前面的`ALL PRIVILEGES ON *.*`表示授权所有权限在所有数据库上。
+权限细分如下：
+
+```
+全局管理权限：
+
+FILE:     在服务器上读写文件。
+PROCESS:  显示或杀死属于其它用户的服务线程。
+RELOAD:   重载访问控制表，刷新日志等。
+SHUTDOWN: 关闭MySQL服务。
+
+数据库/数据表/数据列权限：
+
+ALTER:    修改已存在的数据表(例如增加/删除列)和索引。
+CREATE:   建立新的数据库或数据表。
+DELETE:   删除表的记录。
+DROP:     删除数据表或数据库。
+INDEX:    建立或删除索引。
+INSERT:   增加表的记录。
+SELECT:   显示/搜索表的记录。
+UPDATE:   修改表中已存在的记录。
+
+特别的权限：
+
+ALL:      允许做任何事(和root一样)。
+USAGE:    只允许登录，其它什么也不允许做。
+```
+
+完成后，需要执行下面的命令刷新权限表，配置才能立即生效：
+
+```
+MariaDB [(none)]> FLUSH PRIVILEGES;
+```
+
+可以用下面的命令查询所有的用户信息：
+
+```
+MariaDB [(none)]> select host, user from mysql.user;
+```
