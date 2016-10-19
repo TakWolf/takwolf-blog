@@ -41,4 +41,11 @@ $ nginx   // 直接启动
 $ nginx -s quit
 ```
 
-注意，启动与停止可能要求 root 权限。
+也可以通过 init.d 中的命令来启动和停止：
+
+```
+$ /etc/init.d/nginx start     // 启动
+$ /etc/init.d/nginx stop      // 停止
+```
+
+注意，启动和停止可能要求 root 权限。
