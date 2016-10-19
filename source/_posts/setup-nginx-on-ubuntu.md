@@ -25,9 +25,9 @@ nginx version: nginx/1.4.6 (Ubuntu)
 ```
 
 正常情况，nginx 安装成功之后就应该会启动了。
-访问80端口应该会出现下面的页面：
+访问80端口应该会出现 nginx 的欢迎页：
 
-![](/img/nginx-index-page.jpg)
+![Welcome to nginx!](/img/welcome-to-nginx.jpg)
 
 如果没有启动，直接输入 nginx 就可以启动：
 
