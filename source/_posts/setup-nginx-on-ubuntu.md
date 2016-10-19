@@ -46,6 +46,7 @@ $ nginx -s quit
 ```
 $ /etc/init.d/nginx start     // 启动
 $ /etc/init.d/nginx stop      // 停止
+$ /etc/init.d/nginx restart   // 重启
 ```
 
 注意，启动和停止可能要求 root 权限。
