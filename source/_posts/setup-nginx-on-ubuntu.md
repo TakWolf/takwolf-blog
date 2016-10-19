@@ -49,4 +49,12 @@ $ /etc/init.d/nginx stop      // 停止
 $ /etc/init.d/nginx restart   // 重启
 ```
 
+也可以通过 service 来启动和停止 nginx：
+
+```
+$ service nginx start
+$ service nginx stop
+$ service nginx restart
+```
+
 注意，启动和停止可能要求 root 权限。
