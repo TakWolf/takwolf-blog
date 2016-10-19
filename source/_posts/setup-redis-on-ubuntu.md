@@ -8,7 +8,7 @@ tags:
 - Redis
 - Linux
 ---
-笔记。
+学习笔记。
 
 <!-- more -->
 
