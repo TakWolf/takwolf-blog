@@ -23,7 +23,8 @@ $ apt-get install redis-server
 ```
 $ redis-cli -v
 redis-cli 2.8.4
-
+$ redis-server -v
+Redis server v=2.8.4 sha=00000000:0 malloc=jemalloc-3.4.1 bits=64 build=a44a05d76f06a5d9
 ```
 
 ## 测试 ##
