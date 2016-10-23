@@ -13,7 +13,7 @@ tags:
 ```
 Error:Execution failed for task ':fragmentswitcher:processDebugAndroidTestManifest'.
 > Manifest merger failed : uses-sdk:minSdkVersion 4 cannot be smaller than version 9 declared in library [com.android.support:support-v4:24.2.1] ~\Android-FragmentSwitcher\fragmentswitcher\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\AndroidManifest.xml
-	Suggestion: use tools:overrideLibrary="android.support.v4" to force usage
+Suggestion: use tools:overrideLibrary="android.support.v4" to force usage
 ```
 
 这个错误的意思是，你的项目的 minSdkVersion=4，而 android-support-v4 要求他至少为9
