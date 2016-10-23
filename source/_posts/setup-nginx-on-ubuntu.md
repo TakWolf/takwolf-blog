@@ -1,5 +1,5 @@
 ---
-title: 在 Ubuntu 上安装配置 nginx 笔记
+title: 在 Ubuntu 上安装 nginx 笔记
 date: 2016-10-19 19:59:46
 categories:
 - 技术
@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-## 安装 ##
+安装命令
 
 ```
 $ apt-get install nginx
