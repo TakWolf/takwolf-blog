@@ -44,10 +44,6 @@ date: 2016-06-22 00:00:00
 
 - 使用 Git
 
-- 业余研究过一些游戏和图形图像相关的技术（SDL2, love2d, libGDX, OpenGL）
-
-- 中等水平的 Linux
-
 - 业余时间有一些 Node.js，Vue.js，React-Native 的开发实践
 
 - 正在学习 swift 3
