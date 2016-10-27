@@ -17,7 +17,7 @@ tags:
 
 ```
 @SpringBootApplication
-@EnableJpaAuditing  // 这里，启用审计
+@EnableJpaAuditing // 这里，启用审计
 class Application { ...... }
 ```
 
