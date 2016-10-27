@@ -9,7 +9,8 @@ tags:
 - Spring Boot
 - EnableScheduling
 ---
-在 Spring Boot 中配置定时任务非常简单。默认就支持，不需要添加其他依赖。
+在 Spring Boot 中配置定时任务非常简单。
+默认就支持，他在 spring-context 里面，不需要添加其他依赖。
 
 <!-- more -->
 
