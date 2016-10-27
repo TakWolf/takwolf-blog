@@ -12,6 +12,9 @@ tags:
 这个内容，在官方博客里面有介绍，地址在：
 [https://spring.io/blog/2015/03/26/what-s-new-in-spring-data-fowler#jsr-310-and-threeten-backport-support](https://spring.io/blog/2015/03/26/what-s-new-in-spring-data-fowler#jsr-310-and-threeten-backport-support)
 
+Stackoverflow 上也有一个关于这个问题的讨论，地址在：
+[http://stackoverflow.com/questions/29241575/new-spring-data-jdk8-jsr310jpaconverters-not-working-automatically](http://stackoverflow.com/questions/29241575/new-spring-data-jdk8-jsr310jpaconverters-not-working-automatically)
+
 <!-- more -->
 
 环境是 Spring Boot，在你的启动类上添加注解：
