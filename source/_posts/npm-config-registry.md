@@ -40,7 +40,7 @@ registry=https://registry.npm.taobao.org
 ```
 
 因此，直接修改`~/.npmrc`文件，作用是相同的。
-查看镜像的命令是：
+查看镜像地址的命令是：
 
 ```
 npm config get registry
