@@ -1,32 +1,41 @@
 ---
 title: 关于我
-date: 2016-06-01 00:00:00
+date: 2016-12-21 00:00:00
 ---
-一个：
 
-- 会写一点Java和Android的菜B；
+程序员，资深宅，单身狗
 
-- 能鼓捣点NodeJS的新手；
+鸟厨
+本命是公主殿下
 
-- 花了很多业余时间研究过一些游戏开发相关技术的门外汉；
+普通级绘画技能
+野生级日语技能
+菜鸟级编曲技能
+非常想去做游戏
 
-- 表面上很较真，实际代码写的很一般的强迫症；
+主修Android，顺带写Java
+也会一点NodeJS
+也会一点VueJS
+也会一点Swift
+也会一点lua
+就是搞不定C++
 
-- 目前正在学Swift，但是其实内心挺讨厌苹果的谷歌粉
+特别喜欢 Material Design
+不太喜欢苹果
 
-只做自己喜欢的和感兴趣的技术，不是全栈，也不想成为全栈工程师。
+只做自己喜欢的和感兴趣的技术
+不是全栈，也不想成为全栈工程师
 
-曾经工作与[考拉山团队](http://coloshine.com)，目前是自由职业。
+曾经工作与[考拉山团队](http://coloshine.com)
+目前就职于[拍拍贷](http://www.ppdai.com)
 
-我的简历：[http://blog.takwolf.com/cv](http://blog.takwolf.com/cv)
+### 我的项目主页 ###
 
-### TakWolf ###
+- [Github](https://github.com/takwolf)
 
-- [HomePage](http://takwolf.com)
+- [Git@OSC](http://git.oschina.net/takwolf)
 
-- [Blog](http://blog.takwolf.com)
-
-### SNS ###
+### 我的社交账号 ###
 
 - [Weibo](http://weibo.com/takwolf)
 
@@ -36,18 +45,8 @@ date: 2016-06-01 00:00:00
 
 - [Google+](https://plus.google.com/u/0/101562106204171844130/posts)
 
-### Project ###
+不用看了，我不怎么逛微博，所以还是给我发邮件吧。
 
-- [Github](https://github.com/takwolf)
-
-- [Git@OSC](http://git.oschina.net/takwolf)
-
-### Community ###
-
-- [OSChina](http://my.oschina.net/takwolf)
-
-- [V2EX](http://v2ex.com/member/TakWolf)
-
-### Contact ###
+### 邮件 ###
 
 - [takwolf@foxmail.com](mailto:takwolf@foxmail.com)
