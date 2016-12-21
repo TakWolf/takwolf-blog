@@ -3,6 +3,8 @@ title: 关于我
 date: 2016-12-21 00:00:00
 ---
 
+![Bird](/img/bird_wahaha.jpg)
+
 程序员，资深宅，单身狗
 
 鸟厨
