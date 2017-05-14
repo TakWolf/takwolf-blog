@@ -69,6 +69,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://git.coding.net/takwolf/blog.takwolf.com.git
+  repo: https://github.com/TakWolf/blog.takwolf.com.git
   branch: master
   message: The quick brown fox jumps over the lazy dog
