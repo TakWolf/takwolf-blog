@@ -166,6 +166,10 @@ sidebar:
             link: "/about"
             icon: person
             divider: false
+        发现:
+            link: "/play"
+            icon: gamepad
+            divider: false
     article_num:
         use: false
         divider: false
