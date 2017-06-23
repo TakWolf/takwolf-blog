@@ -185,8 +185,8 @@ sidebar:
 # When you set 'use' as true, the needed css, js, font file will have a new src.
 # The new src will have the base domain you configured in 'base'.
 materialcdn:
-    use:
-    base:
+    use: true
+    base: https://materialcdn.nfz.moe/hexo/1.3.2
 
 # Comment Systems
 # Available value of "use":
