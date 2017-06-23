@@ -1,4 +1,4 @@
-x/**
+/**
  * 背景类
  */
 function Background() {
