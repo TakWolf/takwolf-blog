@@ -16,19 +16,12 @@ Markdown语法和Html是兼容的，所以博客还可以这样玩。
 
 <!-- load the core script -->
 <script src="shoot/Lib/D2D_Engine.js"></script>
-<script src="shoot/Lib/D2D_Engine_cn.js"></script>
 <script src="shoot/Lib/D2D_Texture.js"></script>
-<script src="shoot/Lib/D2D_Texture_cn.js"></script>
 <script src="shoot/Lib/D2D_Sprite.js"></script>
-<script src="shoot/Lib/D2D_Sprite_cn.js"></script>
 <script src="shoot/Lib/D2D_Animation.js"></script>
-<script src="shoot/Lib/D2D_Animation_cn.js"></script>
 <script src="shoot/Lib/D2D_Font.js"></script>
-<script src="shoot/Lib/D2D_Font_cn.js"></script>
 <script src="shoot/Lib/D2D_Audio.js"></script>
-<script src="shoot/Lib/D2D_Audio_cn.js"></script>
 <script src="shoot/Lib/D2D_RectBox.js"></script>
-<script src="shoot/Lib/D2D_RectBox_cn.js"></script>
 
 <!-- load the ex script -->
 <script src="shoot/Ext/keyboard.js"></script>
