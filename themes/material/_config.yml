@@ -28,18 +28,18 @@ url:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Paradox
-#scheme: Isolation
+# scheme: Paradox
+scheme: Isolation
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "Hi, nice to meet you"
-    theme_color: "#0097A7"
-    theme_sub_color: "#00838F"
-    hyperlink_color: "#00838F"
-    button_color: "#757575"
-    android_chrome_color: "#0097A7"
-    nprogress_color: "#29d"
+    slogan: "Anima Game Code Repeat"
+    theme_color: "#FF9800"
+    theme_sub_color: "#EF6C00"
+    hyperlink_color: "#FF9800"
+    button_color: "#FF9800"
+    android_chrome_color: "#FF9800"
+    nprogress_color: "#FF9800"
     nprogress_buffer: "800"
 
 # JS Effect Switches
@@ -65,7 +65,7 @@ background:
     purecolor: "#F5F5F5"
     #bgimg: "/img/bg.png"
     bing:
-        enable: false
+        enable: true
         parameter:
 
 # Images Settings
@@ -120,14 +120,14 @@ toc:
 
 # SNS Menu
 sns:
-    email: youremail@email.com
-    facebook: "https://www.facebook.com/facebook"
-    twitter: "https://twitter.com/twitter"
-    googleplus: "https://www.google.com/"
-    weibo:
+    email: takwolf@foxmail.com
+    facebook: "https://www.facebook.com/hero.takwolf"
+    twitter: "https://twitter.com/takgdx"
+    googleplus: "https://plus.google.com/u/0/101562106204171844130/posts"
+    weibo: "http://weibo.com/takwolf"
     instagram:
     tumblr:
-    github:
+    github: "https://github.com/takwolf"
     linkedin:
     zhihu:
     bilibili:
@@ -147,7 +147,7 @@ sns_share:
 sidebar:
     dropdown:
         Email Me:
-            link: "#"
+            link: "mailto:takwolf@foxmail.com"
             icon: email
     homepage:
         use: true
@@ -158,14 +158,14 @@ sidebar:
         icon: inbox
         divider: false
     categories:
-        use: false
+        use: true
         icon: chrome_reader_mode
         divider: false
     pages:
-        #About:
-            #link: "/about"
-            #icon: person
-            #divider: false
+        关于:
+            link: "/about"
+            icon: person
+            divider: false
     article_num:
         use: false
         divider: false
@@ -184,20 +184,21 @@ sidebar:
 # MaterialCDN
 # When you set 'use' as true, the needed css, js, font file will have a new src.
 # The new src will have the base domain you configured in 'base'.
-materialcdn: 
-    use: 
-    base: 
+materialcdn:
+    use:
+    base:
 
 # Comment Systems
 # Available value of "use":
 #     disqus | disqus_click | changyan | 163gentie
 comment:
-    use:
-    shortname: # duoshuo or disqus shortname
-    changyan_appid:
-    changyan_conf:
-    changyan_thread_key_type: path
-    gentie_productKey: 
+    use: 163gentie
+    gentie_productKey: "f693b4af2b104bb48509d52db8e5b6a2"
+    # shortname: # duoshuo or disqus shortname
+    # changyan_appid:
+    # changyan_conf:
+    # changyan_thread_key_type: path
+    # gentie_productKey:
 
 # Search Systems
 # Available value:
