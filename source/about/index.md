@@ -26,8 +26,6 @@ date: 2016-12-21 00:00:00
 曾经工作与[考拉山](http://coloshine.com)。
 目前就职于[拍拍贷](http://www.ppdai.com)。
 
-#######
-
 我不怎么逛微博，所以有事情还是给我发邮件吧。
 
 - [takwolf@foxmail.com](mailto:takwolf@foxmail.com)
