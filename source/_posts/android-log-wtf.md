@@ -11,7 +11,7 @@ tags:
 
 Android SDK 的日志接口中，有这么一个函数：
 
-```
+``` Java
 android.util.Log.wtf();
 ```
 

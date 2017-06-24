@@ -20,7 +20,7 @@ Stackoverflow 上也有一个关于这个问题的讨论，地址在：
 官方博客说，如果用的是 MongoDB，默认就自动支持了这个转换，如果用的 JPA，你就需要手动开启这个配置。
 方法如下，在你的启动类上添加注解：
 
-```
+``` Java
 @EntityScan(
     basePackageClasses = { Application.class, Jsr310JpaConverters.class }
 )
@@ -34,7 +34,7 @@ class Application { ...... }
 
 这样你就可以在 JPA 中使用 Java 8 的时间 API 了，可以直接这么写：
 
-```
+``` Java
 @Entity
 public class User {
 

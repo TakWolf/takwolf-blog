@@ -72,3 +72,11 @@ deploy:
   repo: https://github.com/TakWolf/blog.takwolf.com.git
   branch: master
   message: The quick brown fox jumps over the lazy dog
+
+
+
+# 代码高亮插件
+prism_plugin:
+  mode: 'realtime'    # realtime/preprocess
+  theme: 'default'
+  line_number: false    # default false

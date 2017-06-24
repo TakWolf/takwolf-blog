@@ -16,7 +16,7 @@ tags:
 
 在你的启动类上添加启用定时任务的注解：
 
-```
+``` Java
 @SpringBootApplication
 @EnableScheduling // 这里，启用定时任务
 class Application { ...... }
@@ -24,7 +24,7 @@ class Application { ...... }
 
 然后，你就可以创建一个定时任务：
 
-```
+``` Java
 @Component
 public class ScheduledTasks {
 
@@ -61,7 +61,7 @@ public class ScheduledTasks {
 说白了，其实我们就是想要知道这个任务执行池是不是个单线程。
 我写了如下的方法来测试：
 
-```
+``` Java
 @Component
 public class ScheduledTasks {
 

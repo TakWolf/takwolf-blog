@@ -15,7 +15,7 @@ tags:
 
 在你的配置类上添加这个标签：
 
-```
+``` Java
 @SpringBootApplication
 @EnableJpaAuditing // 这里，启用审计
 class Application { ...... }
@@ -23,7 +23,7 @@ class Application { ...... }
 
 然后在你的实体类中就可以这么用了：
 
-```
+``` Java
 @Entity
 @EntityListeners(AuditingEntityListener.class)  // 这里注意，启用审计的实体中都必须注册这个 Listener，否则是没有效果的
 public class SomeEntity {

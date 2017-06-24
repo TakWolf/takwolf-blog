@@ -18,13 +18,13 @@ tags:
 
 需求大概是这样的：
 
-```
+``` HTML
   <div id="page">
 	  {{{topic.html}}}    
   </div>
 ```
 
-```
+``` JavaScript
 var vm = new Vue({
     el: '#page',
     data: {
@@ -39,7 +39,7 @@ var vm = new Vue({
 
 想到一个方法是用 jquery 来实现事件绑定：
 
-```
+``` JavaScript
 vm.$watch('topic', function () {
 	$('#page img').unbind('click').click(function () { // 需要解绑，否则会重复绑定事件
 		// some...
@@ -55,7 +55,7 @@ vm.$watch('topic', function () {
 
 Vue.js 的事件绑定支持原生的 event 参数，因此可以通过下面代码来实现：
 
-```
+``` JavaScript
 <div id="page" v-on:click="openImageProxy($event)">
     {{{topic.html}}}    
 </div>

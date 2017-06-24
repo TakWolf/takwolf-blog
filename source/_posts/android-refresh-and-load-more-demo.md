@@ -87,7 +87,7 @@ tags:
 
 [ListView.java](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/java/com/takwolf/android/refreshandloadmore/demo/ui/widget/ListView.java)
 
-```
+``` Java
 public class ListView extends android.widget.ListView {
 
     private final OnScrollListenerProxy onScrollListenerProxy = new OnScrollListenerProxy();
@@ -204,7 +204,7 @@ public class ListView extends android.widget.ListView {
 
 使用方式大概是这样的：
 
-```
+``` Java
 HeaderAndFooterRecyclerView recyclerView = (HeaderAndFooterRecyclerView) findViewById(R.id.recycler_view);
 recyclerView.setLayoutManager(new LinearLayoutManager(context));
 recyclerView.setAdapter(adapter);
@@ -223,7 +223,7 @@ recyclerView.addFooterView(footerView);
 
 [activity_list_view.xml](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/res/layout/activity_list_view.xml)
 
-```
+``` XML
 <android.support.v4.widget.SwipeRefreshLayout
     android:id="@+id/refresh_layout"
     android:layout_width="match_parent"
@@ -244,7 +244,7 @@ recyclerView.addFooterView(footerView);
 
 [activity_recycler_view.xml](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/res/layout/activity_recycler_view.xml)
 
-```
+``` XML
 <android.support.v4.widget.SwipeRefreshLayout
     android:id="@+id/refresh_layout"
     android:layout_width="match_parent"
@@ -264,7 +264,7 @@ recyclerView.addFooterView(footerView);
 
 [ListViewDemoActivity.java](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/java/com/takwolf/android/refreshandloadmore/demo/ui/activity/ListViewDemoActivity.java)
 
-```
+``` Java
 public class ListViewDemoActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
 
     // 一些其他的代码
@@ -326,7 +326,7 @@ public class ListViewDemoActivity extends AppCompatActivity implements SwipeRefr
 
 ListView 中我们这样去判断：
 
-```
+``` Java
 // addOnScrollListener 这个接口是我们扩展的
 listView.addOnScrollListener(new AbsListView.OnScrollListener() {
 
@@ -350,7 +350,7 @@ listView.addOnScrollListener(new AbsListView.OnScrollListener() {
 
 RecyclerView 中我们这样判断：
 
-```
+``` Java
 recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
 
     @Override
@@ -398,7 +398,7 @@ recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
 
 [footer_load_more.xml](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/res/layout/footer_load_more.xml)
 
-```
+``` XML
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -439,7 +439,7 @@ Footer 类这样实现：
 
 [LoadMoreFooter.java](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/java/com/takwolf/android/refreshandloadmore/demo/ui/viewholder/LoadMoreFooter.java)
 
-```
+``` Java
 public class LoadMoreFooter {
 
     public static final int STATE_DISABLED = 0;
@@ -606,7 +606,7 @@ public class LoadMoreFooter {
 
 [ListViewDemoActivity.java](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/java/com/takwolf/android/refreshandloadmore/demo/ui/activity/ListViewDemoActivity.java)
 
-```
+``` Java
 public class ListViewDemoActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener, LoadMoreFooter.OnLoadMoreListener {
 
     private static final int PAGE_SIZE = 20;
@@ -675,7 +675,7 @@ RecyclerView 的使用方式是相同的：
 
 [RecyclerViewDemoActivity.java](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/java/com/takwolf/android/refreshandloadmore/demo/ui/activity/RecyclerViewDemoActivity.java)
 
-```
+``` Java
 public class RecyclerViewDemoActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener, LoadMoreFooter.OnLoadMoreListener {
 
     private static final int PAGE_SIZE = 20;
@@ -747,7 +747,7 @@ public class RecyclerViewDemoActivity extends AppCompatActivity implements Swipe
 
 [ZhihuDemoActivity.java](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo/blob/master/app/src/main/java/com/takwolf/android/refreshandloadmore/demo/ui/activity/ZhihuDemoActivity.java)
 
-```
+``` Java
 public class ZhihuDemoActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener, LoadMoreFooter.OnLoadMoreListener {
 
     @BindView(R.id.refresh_layout)

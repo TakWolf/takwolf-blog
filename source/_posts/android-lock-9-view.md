@@ -25,7 +25,7 @@ tags:
 
 废话不多说，Lock9View.java
 
-```
+``` Java
 /*
  * Copyright 2015-2016 TakWolf
  *
@@ -327,7 +327,7 @@ public class Lock9View extends ViewGroup {
 
 使用十分简单。布局中这样写：
 
-```
+``` XML
 <com.takwolf.android.lock9.Lock9View
     android:id="@+id/lock_9_view"
     android:layout_width="match_parent"
@@ -336,7 +336,7 @@ public class Lock9View extends ViewGroup {
 
 Activity中这样写：
 
-```
+``` Java
 Lock9View lock9View = (Lock9View) findViewById(R.id.lock_9_view);
 lock9View.setCallBack(new CallBack() {
     @Override

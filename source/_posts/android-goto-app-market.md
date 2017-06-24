@@ -14,7 +14,7 @@ tags:
 
 原理十分简单，构建一个`ACTION_VIEW`标记的`Intent`，并给一个如下结构的 Uri 即可：
 
-```
+``` Java
 "market://details?id=" + getPackageName() //商店中使用包名来唯一标识区分应用
 ```
 
@@ -24,7 +24,7 @@ tags:
 
 代码注释很详细：
 
-```
+``` Java
 //这里开始执行一个应用市场跳转逻辑，默认this为Context上下文对象
 Intent intent = new Intent(Intent.ACTION_VIEW);
 intent.setData(Uri.parse("market://details?id=" + getPackageName())); //跳转到应用市场，非Google Play市场一般情况也实现了这个接口
@@ -46,7 +46,7 @@ if (intent.resolveActivity(getPackageManager()) != null) { //可以接收
 
 根据以上，同理使用以下Uri进行替换：
 
-```
+``` Java
 Uri.parse("market://search?q=pub:Author Name"); //跳转到商店搜索界面，并搜索开发者姓名
 Uri.parse("market://search?q=Keyword"); //跳转到商店搜索界面，并搜索关键词
 ```

@@ -38,7 +38,7 @@ Android Support Repository 是安装到本地的
 我们找到：support-v4/24.2.1/support-v4-24.2.1.arr
 解包后打开里面的 AndroidManifest.xml，内容是这样的：
 
-```
+``` XML
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"

@@ -16,7 +16,7 @@ tags:
 
 ## 1.调用系统播放器 ##
 
-```
+``` Java
 Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/video.mp4");  
 Intent intent = new Intent(Intent.ACTION_VIEW);
 intent.setDataAndType(uri, "video/mp4"); //这句不要忘记，表明资源是视频类型
@@ -35,7 +35,7 @@ startActivity(intent);
 
 一个非常简单的例子：
 
-```
+``` Java
 videoView = (VideoView) findViewById(R.id.video_view);
 videoView.setMediaController(new MediaController(this));
 Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/video.mp4");
@@ -50,7 +50,7 @@ VideoView 本身也提供媒体控制接口和监听器。
 
 Android系统默认支持的视频格式如下：
 
-```
+``` Java
 //Video
 addFileType("MP4", FILE_TYPE_MP4, "video/mp4");
 addFileType("M4V", FILE_TYPE_M4V, "video/mp4");
@@ -65,7 +65,7 @@ addFileType("WMV", FILE_TYPE_WMV, "video/x-ms-wmv");
 VideoView 加载视频需要通过 Uri 或者 Path。
 上面的代码是从 SDCard 中加载视频的，Uri 的构筑方式是：
 
-```
+``` Java
 Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/video.mp4");
 ```
 
@@ -74,7 +74,7 @@ Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/video.
 实际编码中我们发现 AssetManager 竟然不能够直接获取 Path，也无法直接构筑 Uri。
 我们按照以往的经验:
 
-```
+``` Java
 WebView webView = new WebView(this);
 webView.loadUrl(file:///android_asset/index.html);
 ```
@@ -87,13 +87,13 @@ webView.loadUrl(file:///android_asset/index.html);
 最终的方案是这样的：
 将视频文件放到 res/raw 文件夹中（注意res资源的命名规则），然后通过包名和 R 中的资源编号构筑 Uri
 
-```
+``` Java
 Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
 ```
 
 最终的代码：
 
-```
+``` Java
 videoView = (VideoView) findViewById(R.id.video_view);
 videoView.setMediaController(new MediaController(this));
 Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);

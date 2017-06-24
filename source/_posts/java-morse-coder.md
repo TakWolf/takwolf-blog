@@ -123,7 +123,7 @@ tags:
 
 这里只说一下在 Java 中相关转换方法。
 
-```
+``` Java
 // String 拆分 codePoint 示例
 String text = "Some Text";
 for (int i = 0; i < text.codePointCount(0, text.length()); i++) {
@@ -160,7 +160,7 @@ new StringBuilder().appendCodePoint(codePoint).toString();
 
 遇到字典中未定义的字母，则按照 Unicode 的二进制值做转换。
 
-```
+``` Java
 public final class MorseCoder {
 
     private static final Map<Integer, String> alphabets = new HashMap<>();    // code point -> morse
@@ -289,7 +289,7 @@ public final class MorseCoder {
 
 使用的时候，是这样的：
 
-```
+``` Java
 public class MorseCoderTest {
 
     private final MorseCoder morseCoder = new MorseCoder();
