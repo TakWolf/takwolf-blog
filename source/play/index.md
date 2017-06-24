@@ -10,6 +10,6 @@ date: 2014-12-09 00:00:00
 
 想要这个樱花飘落的效果，去这里看看：
 
-- [https://github.com/TakWolf/NyanCatEverywhere](https://github.com/TakWolf/NyanCatEverywhere)
+[https://github.com/TakWolf/NyanCatEverywhere](https://github.com/TakWolf/NyanCatEverywhere)
 
 <script src="http://takwolf.com/static/nyancat/js/sakura.js"></script>
