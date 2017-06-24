@@ -166,7 +166,7 @@ sidebar:
             link: "/about"
             icon: person
             divider: false
-        发现:
+        好玩:
             link: "/play"
             icon: gamepad
             divider: false
