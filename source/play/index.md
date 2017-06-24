@@ -1,5 +1,5 @@
 ---
-title: 发现
+title: 好玩
 date: 2014-12-09 00:00:00
 ---
 嘛，这里都是一些好玩的东东。
@@ -14,6 +14,6 @@ date: 2014-12-09 00:00:00
 
 <script src="js/sakura.js"></script>
 
-点击这里开启彩虹猫时代！
+点击这里开启彩虹猫大时代！
 
 [彩虹猫大时代](http://nyan.takwolf.com/nyancat.html#http://blog.takwolf.com)
