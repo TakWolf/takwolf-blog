@@ -1,6 +1,6 @@
 ---
 title: Android - 关于 Log.wtf()
-date: 2017-01-05 00:00:00
+date: 2017-04-05 00:00:00
 categories:
 - 技术
 - Android
