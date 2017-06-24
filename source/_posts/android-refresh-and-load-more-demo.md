@@ -39,7 +39,7 @@ tags:
 
 ![](https://github.com/pnikosis/materialish-progress/raw/master/spinningwheel.gif)
 
-一个可以兼容低版本的 Material Design 风格进度条样式。我希望可以
+一个可以兼容低版本的 Material Design 风格进度条样式。我希望可以保证所有版本的 Android 都要良好的 Material Design 体验。
 
 这不是必须的，你可以替换为默认的进度条控件或者你自己的控件，除了样式之外，不会有其他问题。
 
