@@ -12,4 +12,4 @@ date: 2014-12-09 00:00:00
 
 - [https://github.com/TakWolf/NyanCatEverywhere](https://github.com/TakWolf/NyanCatEverywhere)
 
-<script src="https://github.com/TakWolf/takwolf.github.io/blob/master/static/nyancat/js/sakura.js"></script>
+<script src="http://takwolf.com/static/nyancat/js/sakura.js"></script>
