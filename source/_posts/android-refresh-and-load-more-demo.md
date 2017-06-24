@@ -35,7 +35,7 @@ tags:
 
 即便如此，我们仍然使用了下面的第三方依赖，但是注意，这些依赖都不是必须的：
 
-1. [Material-ish Progress](https://github.com/pnikosis/materialish-progress)
+1.[Material-ish Progress](https://github.com/pnikosis/materialish-progress)
 
 ![](https://github.com/pnikosis/materialish-progress/raw/master/spinningwheel.gif)
 
@@ -43,7 +43,7 @@ tags:
 
 这不是必须的，你可以替换为默认的进度条控件或者你自己的控件，除了样式之外，不会有其他问题。
 
-2. [Android-HeaderAndFooterRecyclerView](https://github.com/TakWolf/Android-HeaderAndFooterRecyclerView)
+2.[Android-HeaderAndFooterRecyclerView](https://github.com/TakWolf/Android-HeaderAndFooterRecyclerView)
 
 这是我写的另外一个组件，它可以扩充 RecyclerView，让其支持 HeaderView 和 FooterView。我们在实现加载更多的时候需要这个特性。
 
@@ -53,7 +53,7 @@ tags:
 
 这不是必须的，你可以有你自己的方式实现这个功能。这不影响我们整篇文章的思路。但是我很推荐你去试试它，也许你会觉得不错呢。
 
-3. [Butter Knife](https://github.com/JakeWharton/butterknife)
+3.[Butter Knife](https://github.com/JakeWharton/butterknife)
 
 通过注解的方式快速实现控件绑定。
 
