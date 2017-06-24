@@ -12,4 +12,8 @@ date: 2014-12-09 00:00:00
 
 [https://github.com/TakWolf/NyanCatEverywhere](https://github.com/TakWolf/NyanCatEverywhere)
 
-<script src="http://takwolf.com/static/nyancat/js/sakura.js"></script>
+<script src="js/sakura.js"></script>
+
+点击这里开启彩虹猫时代！
+
+[彩虹猫大时代](http://nyan.takwolf.com/nyancat.html#http://blog.takwolf.com)
