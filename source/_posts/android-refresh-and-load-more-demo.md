@@ -388,7 +388,7 @@ recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
 
 5. 加载完了，没有更多数据啦（STATE_FINISHED）：已经加载到最后一页了，之后没有数据了，也就不在需要触发加载更多了。
 
-总体来说，基本上就上面5中状态，加网络请求结束的时候，我们根据情况，设置不同的状态。
+总体来说，基本上就上面5中状态，在网络请求结束的时候，我们根据情况，设置不同的状态。
 
 ### 代码实现 ###
 
@@ -830,17 +830,13 @@ public class ZhihuDemoActivity extends AppCompatActivity implements SwipeRefresh
 }
 ```
 
-整个示例项目的代码都在这里了，[https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo](https://github.com/TakWolf/Android-RefreshAndLoadMore-Demo)
+很简单，对吧，下拉刷新的功能就有了。
 
-自己去运行一下，效果会更明显。
+开瓶可乐，庆祝一下。
 
 ## 一些问题 ##
 
-我们实现了下拉刷新和加载更多，看起来很棒，不是吗？我们要开瓶可乐，庆祝一下。
-
-看起来很完美，但是不是真的大功告成了？
-
-这里确实有一些小问题，还好它们都可以解决，但是你还需要注意一下。
+这里有一些小问题，还好它们都可以解决，但是你还需要注意一下。
 
 ### 第一次请求数据填充不足一屏 ###
 
@@ -887,8 +883,6 @@ public class ZhihuDemoActivity extends AppCompatActivity implements SwipeRefresh
 总之目前是有这个 BUG，不确定之后 Google 会不会修复他。现阶段你还是要注意一下这个问题。
 
 ## 完结 ##
-
-写了很多，其实东西很简单。
 
 有些时候，其实不需要很复杂的东西。
 
