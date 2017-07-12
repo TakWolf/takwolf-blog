@@ -213,7 +213,7 @@ sidebar:
 # Available value of "use":
 #     disqus | disqus_click | changyan | 163gentie | livere(laibili)
 comment:
-    use: 163gentie
+    use: takwolf
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
