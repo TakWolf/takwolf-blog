@@ -9,6 +9,8 @@ tags:
 ---
 最近工作中遇到了这么一个需求：如何实现 Android 应用前后台切换的监听？
 
+解决方案笔记。
+
 <!-- more -->
 
 ### iOS 的情况 ###
@@ -123,7 +125,7 @@ public class ApplicationListener implements Application.ActivityLifecycleCallbac
     private int foregroundCount = 0; // 位于前台的 Activity 的数目
 
     @Override
-    public void onActivityStarted(final Activity activity) {
+    public void onActivityStarted(Activity activity) {
         if (foregroundCount <= 0) {
             // TODO 这里处理从后台恢复到前台的逻辑
         }
@@ -242,7 +244,7 @@ public class ApplicationListener implements Application.ActivityLifecycleCallbac
 
     @Override
     public void onActivityStopped(Activity activity) {
-        if (activity.isChangingConfigurations()) {
+        if (activity.isChangingConfigurations()) { // 是 configChanges 的情况，操作缓冲计数器
             bufferCount--;
         } else {
             foregroundCount--;
@@ -276,15 +278,21 @@ public class ApplicationListener implements Application.ActivityLifecycleCallbac
 
 ### 接听电话和请求权限 ###
 
+启动一个 `Activity` 之后，接听一个电话，或者动态申请权限，弹窗系统确认对话框。
 
+上面两种情况，`Activity` 只会调用 `onPause()`，并不会调用 `onStop()`，因此这两种情况并不会触发应用进入后台。
 
+首先我们搞清楚为什么 `onStop()` 不会被调用？
 
+#### 对 onStart()、onStop() 和 onResume()、onPause() 两组回调的区别的理解 ####
 
+为什么 Android 要设计两组回调，区别是什么？
 
+我们看看这四个函数的注释怎么写的。
 
-
-
-### 对 onStart()、onStop() 和 onResume()、onPause() 两组回调的区别的理解 ###
+```
+这里本应该有注释，但是他们太长了，请大家自己去读，下面只说结论。
+```
 
 总结而言：
 
@@ -292,8 +300,148 @@ public class ApplicationListener implements Application.ActivityLifecycleCallbac
 
 `onResume()` 和 `onPause()` 是 `Activity` 活动状态的回调。
 
-你可以详细的看一下文档，或者这四个函数的注释。为了方便理解，我们可以做个简单的实验：
+由此看见，两组回调意义是不同的，用处当然也不同。这也解释了为什么他们的调用顺序不一样。
 
-仍然创建两个 `Activity` 名为 A 和 B，并且给 B 一个特殊的样式，比如：`@android:style/Theme.Translucent` 或者 `@android:style/Theme.Dialog` 或者其他衍生样式（本质是样式包含 `<item name="windowIsTranslucent">true</item>` 或者 `<item name="windowIsFloating">true</item>`）。
+例如，如果你需要操作相机，你应该在 `onResume()` 和 `onPause()` 操作设备，而不是另外两个回调。
 
-效果就是，A 启动了 B，B 在表现上处于一个半透明的状态。这时候你会发现，这个过程，A 只调用了 `onPause()`，没有调用 `onStop()`。
+因为，`onResume()` 和 `onPause()` 就用来表示活动状态切换，顺序调用。
+
+相反，如果你在 `onStart()` 和 `onStop()` 中调用。在 `B.onStart()` 中，`A.onStop()` 还没调用，相机还没释放的，这就会造成问题。
+
+另外一个例子：
+
+给 Activity B 一个特殊的样式，比如：`@android:style/Theme.Translucent` 或者 `@android:style/Theme.Dialog` 或者其他衍生样式（本质是样式包含 `<item name="windowIsTranslucent">true</item>` 或者 `<item name="windowIsFloating">true</item>`）。
+
+这时 A 启动了 B，B 在表现上处于一个半透明的状态。这时候你会发现，这个过程，A 只调用了 `onPause()`，没有调用 `onStop()`，因为 A 仍然可见。
+
+因此可以理解，为什么请求权限，`onStop()` 不会调用，因为底下的 `Activity` 还是可见的。
+
+接听电话比较特殊，因为界面确实被遮挡了，感觉上应该调用 `onStop()`，但实际确实没有调用。但是这可能是合理的，下面解释。
+
+#### iOS 上面的表现 ####
+
+因为 Android 上面没有定义具体的行为（因此我们才要模拟实现一个），因此我倾向于找一个参照。
+
+例如，iOS 上类似的行为是怎么样的？
+
+上文提到过，iOS 有一个 `UIApplicationDelegate`，定义了 Application 的声明周期。
+
+自己分析，发现其实 Android 和 iOS 行为是相似的：
+
+`applicationWillResignActive`、`applicationDidBecomeActive` 和 `activity.onPause`、`activity.onResume` 对应，表示活动状态的切换。
+
+`applicationDidEnterBackground` 和 `applicationWillEnterForeground` 表示 iOS 应用可见状态的切换。
+
+`activity.onStop` 和 `activity.onStart` 表示 `Activity` 可见状态的切换。
+
+差别在于 iOS 的回调是应用级别的，而 Android 是控制器级别的。
+
+经过测试，接听电话和请求权限，在 iOS 上面，仅调用了 `applicationWillResignActive`，没有调用 `applicationDidEnterBackground`。
+
+这意味着，在 iOS 上面，接听电话和和请求权限仅表示应用暂停，不意味着应用进入后台。
+
+这很棒，这意味着我们不需要对上面的代码做特别处理。
+
+但是如果老板或者产品经理就希望接听电话和和请求权限算应用进入后台，咋办？（总会遇到这样的老板或者产品经理）
+
+幸好，这两个可以单独做监听：
+
+- 接听电话可以被 `BroadcastReceiver` 和 `android.intent.action.PHONE_STATE` 监听
+
+- 请求权限也有个回调 `onRequestPermissionsResult`
+
+你自己弄几个 flag 特别处理一下就可以了。
+
+#### 监听 Android 应用级别的恢复和暂停 ####
+
+对照 iOS 的回调，我发现也许我们也可能有这个需求，监听全局的暂停状态，而不是进入后台。
+
+接听电话和请求权限在这个情形下都会被视为暂停。
+
+不行的是我们没法直接实现这个需求，有一个 Hack 的思路，就是在 `onPause()` 创建一个延时检测任务，如果到时间内没有调用 `onResume()`，就说明应用暂停了。
+
+下面上代码实现：
+
+``` java
+public final class ApplicationListener2 implements Application.ActivityLifecycleCallbacks {
+
+    private final Handler handler = new Handler(Looper.getMainLooper());
+
+    private boolean active = false;
+
+    private volatile long checkDelayTime = 100; // 延时检查时间，足够小但是保证 onResume() 可以进入到下一次主循环
+    private boolean checking = false;
+
+    private final Runnable checkRunnable = new Runnable() {
+
+        @Override
+        public void run() {
+            synchronized (checkRunnable) {
+                checking = false;
+                if (active) {
+                    active = false;
+                    // TODO 处理应用被暂停的逻辑
+                }
+            }
+        }
+
+    };
+
+    @Override
+    public void onActivityResumed(Activity activity) {
+        synchronized (checkRunnable) {
+            if (checking) {
+                handler.removeCallbacks(checkRunnable);
+                checking = false;
+            }
+            if (!active) {
+                active = true;
+                // TODO 处理应用被恢复的逻辑
+            }
+        }
+    }
+
+    @Override
+    public void onActivityPaused(Activity activity) {
+        synchronized (checkRunnable) {
+            if (active) {
+                handler.removeCallbacks(checkRunnable);
+                handler.postDelayed(checkRunnable, checkDelayTime);
+                checking = true;
+            }
+        }
+    }
+
+    /*
+     * 下面回调，我们都不需要
+     */
+
+    @Override
+    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {}
+
+    @Override
+    public void onActivityDestroyed(Activity activity) {}
+
+    @Override
+    public void onActivityStarted(Activity activity) {}
+
+    @Override
+    public void onActivityStopped(Activity activity) {}
+
+    @Override
+    public void onActivitySaveInstanceState(Activity activity, Bundle outState) {}
+
+}
+```
+
+## 结尾 ##
+
+上面的都是具体的分析思路，我已经做了两个独立的库可以直接拿来用的，对应上面两种情形。
+
+[Android-Foreback](https://github.com/TakWolf/Android-Foreback) - 监听应用前台后台切换。
+
+[Android-Repause](https://github.com/TakWolf/Android-Repause) - 监听应用级别恢复暂停。
+
+需要请自取。
+
+真完结。
