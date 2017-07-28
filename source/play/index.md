@@ -17,3 +17,7 @@ date: 2014-12-09 00:00:00
 点击这里开启彩虹猫大时代！
 
 [彩虹猫大时代](http://nyan.takwolf.com/nyancat.html#http://blog.takwolf.com)
+
+windows93
+
+[http://www.windows93.net/#!potato](http://www.windows93.net/#!potato)
