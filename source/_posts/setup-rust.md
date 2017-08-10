@@ -8,7 +8,7 @@ tags:
 - Rust
 - rustup
 ---
-适用于 Windows 和 macOS。
+适用于 macOS 和 Windows。
 
 笔记。
 
@@ -38,7 +38,7 @@ $ curl https://sh.rustup.rs -sSf | sh
 
 注意，在 Windows 上面，Rust 编译需要 Visual C++ Build Tools。请先安装这个之后再安装 rustup。
 
-你非要不安装也许，rustup 会给出警告，工具链会被接换到 Gun C 上面，可能会有一些问题。
+你非要不安装也行，rustup 会给出警告，工具链会被接换到 Gun C 上面，可能会有一些问题。
 
 关于这一部分，请参考 [https://github.com/rust-lang-nursery/rustup.rs#working-with-rust-on-windows](https://github.com/rust-lang-nursery/rustup.rs#working-with-rust-on-windows)
 
