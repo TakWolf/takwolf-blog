@@ -213,7 +213,7 @@ sidebar:
 # Available value of "use":
 #     disqus | disqus_click | changyan | 163gentie | livere(laibili)
 comment:
-    use: takwolf
+    use: gitment
     shortname: # duoshuo or disqus shortname
     changyan_appid:
     changyan_conf:
@@ -221,6 +221,14 @@ comment:
     gentie_productKey: f693b4af2b104bb48509d52db8e5b6a2
     gentie_thread_key_type: path # path | id
     livere_data_uid:
+    # gitment
+    gitment:
+        owner: TakWolf
+        repo: blog.takwolf.com
+        oauth:
+            client_id: 9b14d26b1a7e35fd47d7
+            client_secret: 64fd4c54a64bc33816468348cd73b4d61c88dd0e
+
 
 # Search Systems
 # Available value:
