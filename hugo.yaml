@@ -1,0 +1,19 @@
+baseURL: https://blog.takwolf.com/
+languageCode: zh-Hans
+title: 狼人小林的博客
+
+menus:
+  main:
+    - name: 首页
+      pageRef: /
+      weight: 10
+    - name: 文章
+      pageRef: /posts
+      weight: 20
+    - name: 标签
+      pageRef: /tags
+      weight: 30
+
+module:
+  imports:
+    path: github.com/TakWolf/hugo-theme-pixelfy

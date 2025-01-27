@@ -1,4 +1,0 @@
-baseURL = 'http://blog.takwolf.org/'
-languageCode = 'zh-cn'
-title = '狼人小林的博客'
-theme = 'base16'
