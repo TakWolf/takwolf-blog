@@ -25,6 +25,8 @@ params:
   social:
     - name: github
       url: https://github.com/TakWolf
+    - name: discord
+      url: https://discord.gg/9HY9WD4TRe
     - name: bilibili
       url: https://space.bilibili.com/445245
     - name: rss
