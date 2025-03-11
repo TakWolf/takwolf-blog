@@ -120,5 +120,5 @@ outputs:
 
 markup:
   highlight:
-    lineNos: true
+    lineNos: false
     noClasses: false
