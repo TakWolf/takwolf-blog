@@ -20,7 +20,7 @@ tags:
 
 ``` HTML
   <div id="page">
-	  {{{topic.html}}}    
+	  {{{topic.html}}}
   </div>
 ```
 
@@ -57,7 +57,7 @@ Vue.js 的事件绑定支持原生的 event 参数，因此可以通过下面代
 
 ``` JavaScript
 <div id="page" v-on:click="openImageProxy($event)">
-    {{{topic.html}}}    
+    {{{topic.html}}}
 </div>
 
 var vm = new Vue({

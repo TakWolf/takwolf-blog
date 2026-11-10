@@ -137,7 +137,7 @@ class Dog extends Animal {
 
 class Cat extends Animal {
     @override
-    void speak() { /* mew */ } 
+    void speak() { /* mew */ }
 }
 ```
 
@@ -147,7 +147,7 @@ class Cat extends Animal {
 class Dog(Animal):
     def __init__(self):
         super.__init__()
-    
+
     def eat():
         pass
 ```

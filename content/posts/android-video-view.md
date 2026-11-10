@@ -17,7 +17,7 @@ tags:
 ## 1.调用系统播放器
 
 ``` Java
-Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/video.mp4");  
+Uri uri = Uri.parse(Environment.getExternalStorageDirectory().getPath()+"/video.mp4");
 Intent intent = new Intent(Intent.ACTION_VIEW);
 intent.setDataAndType(uri, "video/mp4"); //这句不要忘记，表明资源是视频类型
 startActivity(intent);

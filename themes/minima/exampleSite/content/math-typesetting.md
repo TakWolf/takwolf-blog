@@ -4,7 +4,7 @@ title: Math Typesetting
 date: 2020-07-18T10:52:59+08:00
 description: A brief guide to write mathematical notation.
 math: true
-tags: 
+tags:
     - KaTex
     - markdown
 ---
@@ -24,13 +24,13 @@ The following are some examples of mathematical notations with KaTeX that are pr
 ### Block
 
 ```
-\varphi = 1+\frac{1}{1+\frac{1}{1+\frac{1} {1+\cdots}}} 
+\varphi = 1+\frac{1}{1+\frac{1}{1+\frac{1} {1+\cdots}}}
 ```
 
 wiil be rendered as:
 
 $$
-\varphi = 1+\frac{1}{1+\frac{1}{1+\frac{1} {1+\cdots}}} 
+\varphi = 1+\frac{1}{1+\frac{1}{1+\frac{1} {1+\cdots}}}
 $$
 
 ### Inline
